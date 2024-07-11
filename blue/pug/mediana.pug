@@ -1,0 +1,153 @@
+extends common/_layout.pug
+include common/_mixins.pug
+
+block links
+    link(rel="stylesheet", href="css/mediana.css")
+
+block content
+    
+    section.main
+        div.container
+            img(src="images/main2.webp", alt="", style="object-position: 25% center")
+            div.text
+                h1 медиана — управляй своим возрастом
+                span 50 лет – медиана вашей здоровой и счастливой жизни
+
+    section.age
+        div.container
+            h2 управляй возрастом 50+
+            div.text
+                div.left
+                    p Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
+                    img(src="images/21.webp", alt="")
+                div.right
+                    strong Ваш возраст - это ваши дополнительные возможности!
+                    span Используйте скидку 10% на качественный и полезный отдых - только для гостей от 50 лет.
+                    h3 Цена путевки на 3 дня от 15 930 ₽ #[div.note: img(src="images/question.svg", alt="")]
+                    ul
+                        li 
+                            img(src="images/horn.svg", alt="")
+                            span Акция распростроняется на все программы
+                        li 
+                            img(src="images/percents_20.svg", alt="")
+                            span Суммируется с программой лояльности до 15%
+            div.banner
+                h3 Запланируй поездку
+                span на даты отдыха #[b с 29.08.2024 по 25.10.2024] #[b с 03.11.2024 по 26.12.2024] от 3 дней
+                button.white
+                    span Воспользоваться акцией
+                    include ../images/button_arrow.svg
+
+    section.callback
+        div.container
+            h2 ВАШ ВОЗРАСТ – ЭТО ВАШИ ДОПОЛНИТЕЛЬНЫЕ ВОЗМОЖНОСТИ!
+            h3 Используйте скидку 10% #[br]на качественный и полезный отдых
+            button.blue
+                span Оставить заявку на программу
+                include ../images/button_arrow.svg
+            ul
+                li Акция распространяется на все программы
+                li Только для гостей от 50 лет
+                li Суммируется с программой лояльности до 15%
+
+    section.programs
+        div.container
+            h2 Рекомендуемые программы
+            div.swiper.line
+                div.swiper-wrapper
+                    div.swiper-slide: +program_full('images/15.webp', 'От 7 дней', 'Здоровье стандарт', '26 056 ₽', 'high')
+                    div.swiper-slide: +program_full('images/16.webp', 'От 10 дней', 'Здоровье плюс', '36 056 ₽', 'low')
+                    div.swiper-slide: +program_full('images/17.webp', 'От 10 дней', 'Здоровый позвоночник и суставы', '46 056 ₽', 'middle')
+
+    section.therapy
+        div.container
+            div.text
+                h2 Комплексы интенсивного восстановления
+                span Дополнительные пакеты процедур, усиливающие лечение. Приобретаются отдельно.
+            div.swiper
+                    div.swiper-wrapper
+                        div.swiper-slide: +program_full('images/18.webp', 'От 7 дней', 'Здоровье глаз', '26 056 ₽')
+                        div.swiper-slide: +program_full('images/19.webp', 'От 10 дней', 'Перезагрузка', '36 056 ₽')
+                        div.swiper-slide: +program_full('images/20.webp', '3 - 10 дней', 'Здоровая спина', '46 056 ₽')
+
+    section.healing
+        div.container
+            h2 Лечение в современному санатории
+            div.list
+                div
+                    img(src="images/sofa.svg", alt="")
+                    span Современный интерьер, профильное оборудование,  30 врачей-экспертов
+                div
+                    img(src="images/healing.svg", alt="")
+                    span Назначение лечебных и оздоровительных процедур с первого дня пребывания
+                div
+                    img(src="images/orthopedic.svg", alt="")
+                    span Экспертность в лечении опорно-двигательного аппарата и широкий спектр специализированных процедур
+                div
+                    img(src="images/blood.svg", alt="")
+                    span Наличие уникальных инновационных методов лечения для Белокурихи – таких, как IV-терапия
+                div
+                    img(src="images/award.svg", alt="")
+                    span Множество наград в номинации «Лучшее медицинское отделение»
+
+    section.advantages
+        div.container
+            h2 Преимущества бархатного сезона
+            div.swiper
+                div.swiper-wrapper
+                    div.swiper-slide: +bonus('images/10.webp', 'Бассейн и сауна', 'Работа комплекса подогреваемых бассейнов до конца сентября и спокойная атмосфера релакса')
+                    div.swiper-slide: +bonus('images/11.webp', 'бархатная осень', 'Идеальные условия для восстановления! Приятная погода без жары и яркие краски осенней природы. ')
+                    div.swiper-slide: +bonus('images/12.webp', 'развлечения', 'Специальный комплекс развлечений, разработанный для этого периода.')
+
+    section.service
+        div.container
+            h2 Отличный сервис
+            div.content
+                div.advantages
+                    h3 преимущества номеров повышенной комфортности
+                    ul
+                        li: span от 22 до 95 кв.м.
+                        li: span Питание в ресторане
+                        li: span Бесплатные услуги по стирке в прачечной без ограничения
+                    h3 Персональный ассистент #[div.note: img(src="images/question.svg", alt="")]
+                div.slider
+                    div.swiper
+                        div.swiper-wrapper
+                            div.swiper-slide: img(src="images/13.webp", alt="")
+                            div.swiper-slide: img(src="images/13.webp", alt="")
+                            div.swiper-slide: img(src="images/13.webp", alt="")
+                            div.swiper-slide: img(src="images/13.webp", alt="")
+                            div.swiper-slide: img(src="images/13.webp", alt="")
+                    div.swiper-pagination
+                    div.swiper-navigation
+                        div.arrow: include ../images/button_arrow.svg
+                        div.arrow: include ../images/button_arrow.svg
+
+    include sections/_reviews.pug
+
+    section.excursion
+        div.container
+            h2 Осенняя экскурсия
+            div.player
+                div.play
+                    div(onclick="this.parentNode.nextElementSibling.pause(); this.parentNode.classList.remove('played')").overlay
+                    div(onclick="this.parentNode.nextElementSibling.play(); this.parentNode.classList.add('played')").icon: img(src="images/play.svg", alt="")
+                video(poster="images/main.webp", loop, playsinline )
+                    source(src="images/test.mp4", type="video/mp4")
+
+    section.additions
+        div.container
+            div.swiper
+                div.swiper-wrapper
+                    div.swiper-slide: +advantage('images/percents_10.svg', 'Скидка 10% для гостей старше 50 лет на все программы и любые категории номеров')
+                    div.swiper-slide: +advantage('images/percents_15.svg', 'Дополнительная скидка по программе лояльности — до 15% ')
+                    div.swiper-slide: +advantage('images/sofa_2.svg', 'Стоимость путевки рассчитана для 1 гостя при размещении на основном месте в номере «Семейный 1-комнатный (без балкона)»')
+                    div.swiper-slide: +advantage('images/calendar.svg', 'Минимально возможное количество дней пребывания соответствуют представленным программам')
+                    div.swiper-slide: +advantage('images/world.svg', 'Акция действительна при покупке на сайте или по номеру горячей линии 8 800 550 0880')
+
+    include sections/_reserve.pug
+
+    //- include sections/_conditions.pug
+
+
+

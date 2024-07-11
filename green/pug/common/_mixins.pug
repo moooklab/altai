@@ -1,0 +1,78 @@
+mixin program(image, title, text)
+    a(href="###").program
+        img(src=image, alt="")
+        div.text
+            h3= title
+            span= text
+
+mixin program_full(image, date, title, price, level)
+    a(href="###").program_full
+        div.image
+            img(src=image, alt="")
+            span.date= date
+        div.description
+            h3= title
+            div.wrap
+                div.overflow
+                    ul
+                        li 
+                            img(src="images/blanc.svg", alt="")
+                            span 2-3 процедуры в день
+                        li 
+                            img(src="images/cards.svg", alt="")
+                            span Не требует санаторно-курортной карты
+                    span.price= price
+        div.additional
+            button.green: span Подробнее
+            if level
+                div.level
+                    span Уровень:
+                    if level == 'low'
+                        div.low
+                            div
+                            div
+                            div
+                    if level == 'middle'
+                        div.middle
+                            div
+                            div
+                            div
+                    if level == 'high'
+                        div.high
+                            div
+                            div
+                            div
+
+mixin therapy(image, title, text)
+    a(href="###").therapy
+        img(src=image, alt="")
+        div.text
+            h3= title
+            if text
+                span= text
+
+mixin bonus(image, title, text)
+    div.bonus
+        img(src=image, alt="")
+        div.text
+            h3= title
+            span= text
+        if block
+            block
+
+mixin review(name, date, text)
+    div.review
+        div.stars
+            img(src="images/star.svg", alt="")
+            img(src="images/star.svg", alt="")
+            img(src="images/star.svg", alt="")
+            img(src="images/star.svg", alt="")
+            img(src="images/star.svg", alt="")
+        div.text= text
+        div.author= name
+        div.date !{date} на #[a(href="###") Яндекс]
+
+mixin advantage(icon, text)
+    div.advantage
+        div.icon: img(src=icon, alt="")
+        span= text

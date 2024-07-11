@@ -1,0 +1,613 @@
+section.main {
+  width: 100%;
+}
+section.main div.container {
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  height: 622px;
+}
+@media (max-width: 960px) {
+  section.main div.container {
+    height: 480px;
+  }
+}
+section.main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.main div.text {
+  display: grid;
+  grid-gap: 4px;
+  position: relative;
+  text-align: right;
+  color: #fff;
+  padding-bottom: 108px;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+@media (max-width: 960px) {
+  section.main div.text {
+    padding-bottom: 40px;
+  }
+}
+section.main div.text h1 {
+  text-align: right;
+}
+section.main div.text span {
+  font-weight: 500;
+  font-size: 20px;
+  text-align: right;
+}
+@media (max-width: 960px) {
+  section.main div.text span {
+    font-size: 14px;
+  }
+}
+
+section.reviews {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.reviews {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.reviews div.container {
+  display: grid;
+  grid-gap: 26px;
+}
+@media (max-width: 960px) {
+  section.reviews div.container {
+    grid-gap: 14px;
+  }
+}
+section.reviews div.title {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 60px;
+}
+@media (max-width: 960px) {
+  section.reviews div.title {
+    grid-template-columns: 1fr -webkit-max-content;
+    grid-template-columns: 1fr max-content;
+  }
+  section.reviews div.title a.button {
+    display: none;
+  }
+}
+section.reviews div.title a.button {
+  min-width: 228px;
+  background: transparent;
+  border: 1px solid #008ed3;
+  color: #008ed3;
+}
+section.reviews div.title a.button svg path {
+  fill: #008ed3;
+}
+section.reviews div.slider {
+  display: grid;
+  grid-gap: 32px;
+  position: relative;
+}
+section.reviews div.swiper {
+  width: 100%;
+  min-width: 0px;
+}
+section.reviews div.swiper-pagination {
+  position: static;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 15px;
+}
+section.reviews div.swiper-pagination span {
+  display: grid;
+  border-radius: 20px;
+  width: 5px;
+  height: 5px;
+  background: #89b9d9;
+  opacity: 1;
+  margin: unset !important;
+}
+section.reviews div.swiper-pagination span.swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
+  background: #00a1ff;
+}
+section.reviews div.swiper-navigation {
+  position: absolute;
+  top: calc(50% - 37px);
+  left: -52px;
+  width: calc(100% + 64px + 40px);
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  z-index: 1;
+  pointer-events: none;
+}
+section.reviews div.swiper-navigation > *:first-child svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+section.reviews div.swiper-navigation > * {
+  pointer-events: auto;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+section.reviews div.swiper-navigation > *:hover svg path {
+  fill: #305752;
+}
+section.reviews div.swiper-navigation > * svg {
+  width: 100%;
+  height: 100%;
+}
+
+section.reserve {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.reserve {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.reserve div.container {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  grid-gap: 24px;
+  text-align: center;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  height: 314px;
+}
+@media (max-width: 960px) {
+  section.reserve div.container {
+    height: auto;
+    padding: 36px 16px;
+  }
+}
+section.reserve h2 {
+  margin-bottom: 10px;
+}
+section.reserve form {
+  display: grid;
+  grid-template-columns: 1fr 1fr -webkit-max-content;
+  grid-template-columns: 1fr 1fr max-content;
+  grid-gap: 20px;
+  width: 100%;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+@media (max-width: 960px) {
+  section.reserve form {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    max-width: 380px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+section.reserve form button {
+  min-width: 270px;
+  background: #00a1ff;
+}
+@media (max-width: 960px) {
+  section.reserve form button {
+    justify-self: center;
+    width: 100%;
+  }
+}
+section.reserve div.note {
+  display: grid;
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
+  color: #727272;
+}
+
+section.conditions {
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+@media (max-width: 960px) {
+  section.conditions {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.conditions div.container {
+  display: grid;
+  grid-gap: 16px;
+}
+section.conditions div.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 32px;
+}
+@media (max-width: 640px) {
+  section.conditions div.list {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
+}
+section.conditions ul li {
+  list-style-type: disc;
+  margin-left: 1.75em;
+}
+
+section.what {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.what {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.what div.container {
+  padding: 20px 22px 20px 37px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background: #f4f2f2;
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  border-radius: 20px;
+}
+@media (max-width: 640px) {
+  section.what div.container {
+    border-radius: 8px;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding: 20px 16px;
+  }
+}
+section.what div.text {
+  display: grid;
+  grid-gap: 24px;
+  max-width: 584px;
+}
+section.what div.text strong {
+  display: block;
+  margin-bottom: 12px;
+}
+section.what div.text ul {
+  display: grid;
+  grid-gap: 16px;
+  color: #008ed3;
+}
+section.what div.text ul li {
+  display: grid;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  grid-gap: 8px;
+}
+section.what div.text ul li img {
+  position: relative;
+  margin-top: -6px;
+}
+section.what div.action {
+  padding: 46px 50px 42px;
+  display: grid;
+  grid-gap: 34px;
+  align-self: stretch;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  border-radius: 20px;
+  height: 316px;
+  background: #008ed3;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 960px) {
+  section.what div.action {
+    grid-gap: 20px;
+    padding: 20px 16px;
+    height: auto;
+  }
+}
+
+section.programs {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.programs {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.programs div.container {
+  display: grid;
+  grid-gap: 44px;
+}
+@media (max-width: 960px) {
+  section.programs div.container {
+    grid-gap: 24px;
+  }
+}
+section.programs div.text {
+  display: grid;
+  grid-gap: 10px;
+}
+section.programs div.swiper {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
+section.benefit {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.benefit {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.benefit div.container {
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  grid-gap: 32px;
+  text-align: center;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 50px 16px;
+}
+@media (max-width: 960px) {
+  section.benefit div.container {
+    height: auto;
+    padding: 50px 16px;
+  }
+}
+section.benefit button {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+section.bonuses {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.bonuses {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.bonuses div.container {
+  display: grid;
+  grid-gap: 16px;
+}
+section.bonuses div.list {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 40px;
+}
+@media (max-width: 960px) {
+  section.bonuses div.list {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.bonuses div.swiper {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+section.bonuses div.discounts {
+  border-radius: 20px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  padding: 34px 20px;
+}
+section.bonuses div.discounts h3 {
+  color: #00a1ff;
+  margin-bottom: 24px;
+}
+section.bonuses div.discounts span {
+  display: block;
+}
+section.bonuses div.discounts a {
+  display: inline-block;
+  border-bottom: 1px solid #212121;
+}
+section.bonuses div.discounts a:hover {
+  border-bottom: 1px solid transparent;
+}
+section.bonuses div.discounts ul {
+  display: grid;
+  grid-gap: 26px;
+  margin-top: 20px;
+}
+section.bonuses div.discounts ul li {
+  display: grid;
+  grid-template-columns: -webkit-max-content auto;
+  grid-template-columns: max-content auto;
+  grid-gap: 24px;
+}
+section.bonuses div.discounts ul div.icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+section.bonuses div.discounts ul div.icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.bonuses div.discounts ul div.icon:before {
+  content: attr(data-percents);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: -0.06em;
+  color: #215b47;
+}
+section.bonuses div.percents {
+  display: inline-grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background: #00a1ff;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+  text-align: center;
+  color: #fdfdfd;
+  z-index: 1;
+}
+@media (max-width: 1280px) {
+  section.bonuses div.percents {
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 960px) {
+  section.bonuses div.percents {
+    display: none;
+  }
+}
+section.bonuses div.percents b {
+  font-weight: 500;
+  font-size: 28px;
+}
+@media (max-width: 1280px) {
+  section.bonuses div.percents b {
+    font-size: 18px;
+  }
+}
+
+section.therapy {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.therapy {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.therapy div.container {
+  display: grid;
+  grid-gap: 26px;
+}
+section.therapy div.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+@media (max-width: 960px) {
+  section.therapy div.list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 640px) {
+  section.therapy div.list {
+    grid-template-columns: 1fr;
+  }
+}
+section.therapy div.benefit {
+  margin-top: 44px;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  grid-gap: 30px;
+  text-align: center;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
+  height: 200px;
+  padding: 20px 16px;
+}
+@media (max-width: 960px) {
+  section.therapy div.benefit {
+    margin-top: 34px;
+  }
+}
+section.therapy div.benefit button {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+section.additions {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+@media (max-width: 960px) {
+  section.additions {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+section.additions div.container {
+  display: grid;
+  grid-gap: 20px;
+}
+section.additions div.swiper {
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+}/*# sourceMappingURL=dolgoletie_blue.css.map */

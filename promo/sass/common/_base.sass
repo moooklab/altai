@@ -1,0 +1,22 @@
+*
+    line-height: 1.4em
+    
+html, body
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+    text-size-adjust: 100%
+    -webkit-appearance: none
+    scroll-behavior: smooth
+    overflow-x: clip
+    color: #424242
+
+section
+    position: relative
+    &[id]
+        scroll-margin-top: calc(var(--section-between-gap) + var(--header-height))
+
+div.container
+    position: relative
+    max-width: 1440px
+    margin: 0 auto
+    padding: 0 var(--section-side-gap)

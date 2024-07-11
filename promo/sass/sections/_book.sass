@@ -1,0 +1,35 @@
+section.book
+    margin-top: var(--section-between-gap)
+    margin-bottom: var(--section-between-gap)
+    text-align: center
+    h2
+        max-width: 960px
+    div.container
+        display: grid
+        grid-gap: calc(var(--section-side-gap) * 2)
+        justify-items: center
+    div.advantages
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        grid-gap: var(--section-side-gap)
+        div.advantage
+            display: grid
+            grid-gap: 1rem
+            justify-items: center
+    button
+        padding: 1.25rem 6rem
+
+@media (max-width: 960px)
+    section.book
+        div.advantages
+            grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 640px)
+    section.book
+        div.advantages
+            grid-template-columns: repeat(2, 1fr)
+            div.advantage
+                img
+                    height: 50px
+        button
+            padding: 1rem 2rem

@@ -1,0 +1,33 @@
+section.main
+    div.container
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+    div.text
+        position: relative
+        padding-top: calc(var(--section-between-gap) * 1.5)
+        padding-bottom: calc(var(--section-between-gap) * 1.5)
+        display: grid
+        grid-gap: var(--section-side-gap)
+        justify-items: start
+        color: white
+        z-index: 1
+    div.background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center center
+
+@media (max-width: 640px)
+    section.main
+        div.container
+            grid-template-columns: 1fr
+            text-align: center
+        div.text
+            justify-items: center

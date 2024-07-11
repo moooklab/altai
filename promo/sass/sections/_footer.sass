@@ -1,0 +1,98 @@
+footer
+    box-shadow: 0px -4px 8px 0px rgba(0, 0, 0, 0.03)
+    padding-top: calc(var(--section-side-gap) * 2)
+    padding-bottom: calc(var(--section-side-gap) * 2)
+    div.container
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: var(--section-side-gap)
+    div.contacts
+        display: grid
+        grid-gap: var(--section-side-gap)
+        div.phone
+            display: grid
+            a
+                @include font(24px, 32px)
+        div.socials
+            display: grid
+            width: max-content
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: .5rem
+            a
+                height: max-content
+                display: block
+    div.subscribe
+        display: grid
+        grid-gap: 1rem
+        form
+            display: grid
+            grid-template-columns: 1fr max-content
+            input
+                font-size: 15px
+                margin-right: -2rem
+                border-top-left-radius: 999px
+                border-bottom-left-radius: 999px
+                border: 1px solid #E8E8E8
+                padding-left: 1.5rem
+                &::-webkit-input-placeholder
+                    color: #E8E8E8
+                &:-moz-placeholder
+                    color: #E8E8E8
+    div.reviews
+        display: grid
+        grid-gap: var(--section-side-gap)
+        div.score
+            display: grid
+            grid-template-columns: max-content max-content
+            div.numbers
+                display: grid
+                grid-template-columns: max-content max-content
+                align-content: center
+                align-items: end
+                padding: .25rem .5rem
+                background-color: #0098DB
+                color: white
+                border-top-left-radius: 8px
+                font-size: 18px
+                line-height: 1em
+                span
+                    font-size: 12px
+                    line-height: 1.8em
+            div.text
+                display: grid
+                padding: .25rem .5rem
+                border: 1px solid #0098DB
+                border-bottom-right-radius: 8px
+                span
+                    font-size: 12px
+    small.policy
+        grid-column: 3 span
+                
+
+@media (max-width: 1080px)
+    footer
+        div.container
+            grid-template-columns: repeat(2, 1fr)
+        div.contacts
+            grid-gap: 1rem
+            div.socials
+                grid-template-columns: repeat(6, 1fr)
+        div.reviews
+            grid-gap: 1rem
+        small.policy
+            grid-column: 2 span
+        
+@media (max-width: 640px)
+    footer
+        div.container
+            grid-template-columns: 1fr
+            grid-gap: var(--section-between-gap)
+            justify-items: center
+        div.reviews, div.phone
+            justify-items: center
+        div.subscribe
+            strong
+                text-align: center
+        small.policy
+            grid-column: 1 span

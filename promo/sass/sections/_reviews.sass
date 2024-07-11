@@ -1,0 +1,69 @@
+section.reviews
+    margin-top: var(--section-between-gap)
+    margin-bottom: var(--section-between-gap)
+    div.title
+        display: grid
+        grid-template-columns: 1fr max-content
+        align-items: center
+        margin-bottom: calc(var(--section-side-gap) * 2)
+    div.container
+        &::before, &::after
+            content: ''
+            position: absolute
+            top: 25%
+            height: 90%
+            aspect-ratio: 16 / 9
+            background-repeat: no-repeat
+            background-size: contain
+        &::before
+            right: calc(100% - 80px)
+            background-image: url(images/reviews_background_left.svg)
+            background-position: right center
+        &::after
+            left: calc(100% - 80px)
+            background-image: url(images/reviews_background_right.svg)
+            background-position: left center
+    div.swiper-slide
+        display: grid
+        grid-gap: 1rem
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: 'A A' 'B C' 'D D' 'E E'
+        padding: var(--section-side-gap)
+        border: 1px solid #E8E8E8
+        background-color: white
+        border-radius: 12px
+        strong
+            grid-area: A
+            @include font(20px, 24px)
+        span.date
+            grid-area: B
+            color: #A0A0A0
+        div.stars
+            grid-area: C
+            justify-self: end
+        p
+            grid-area: D
+        a
+            grid-area: E
+
+    div.swiper-navigation
+        display: grid
+        grid-template-columns: repeat(2, max-content)
+        grid-gap: 1rem
+        pointer-events: none
+        user-select: none
+        & > *
+            cursor: pointer
+            display: grid
+            align-items: center
+            justify-items: center
+            width: 32px
+            aspect-ratio: 1 / 1
+            border-radius: 999px
+            background: #0098DB
+            pointer-events: visible
+            &:first-child
+                transform: rotate(180deg)
+            &.swiper-button-disabled
+                pointer-events: none
+                background-color: rgba(232, 232, 232, 0.30)

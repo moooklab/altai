@@ -1,0 +1,44 @@
+h1
+    @include font(36px, 56px)
+    font-weight: 400
+    line-height: 1.1em
+
+h2
+    @include font(30px, 40px)
+    font-weight: 400
+    line-height: 1.2em
+
+h3
+    font-size: 2rem
+    line-height: 1em
+
+button
+    cursor: pointer
+    display: grid
+    grid-auto-flow: column
+    grid-auto-columns: max-content
+    align-items: center
+    grid-gap: .5rem
+    background-color: #0098DB
+    color: white
+    padding: .8rem 2rem
+    border-radius: 999px
+    transition: background-color .2s
+    border: 1px solid transparent
+    path
+        transition: fill .2s
+    &.empty
+        border: 1px solid #0098DB
+        background-color: white
+        color: #0098DB
+    &:hover
+        color: white
+        background-color: #00A1FF
+        path
+            fill: white
+
+*.blue
+    color: #0098DB
+
+div.swiper
+    user-select: none

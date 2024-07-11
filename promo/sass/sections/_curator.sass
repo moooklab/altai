@@ -1,0 +1,40 @@
+section.curator
+    margin-top: var(--section-between-gap)
+    margin-bottom: var(--section-between-gap)
+    div.container
+        display: grid
+        grid-template-columns: 4fr 7fr
+        
+    div.text
+        position: relative
+        padding: var(--section-side-gap)
+        margin: var(--section-side-gap)
+        border-radius: 12px
+        background-color: white
+        display: grid
+        grid-gap: 1rem
+        justify-items: start
+        z-index: 1
+    div.background
+        position: absolute
+        top: 0
+        left: var(--section-side-gap)
+        width: calc(100% - (var(--section-side-gap) * 2))
+        height: 100%
+        z-index: 0
+        border-radius: 12px
+        overflow: clip
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center center
+
+@media (max-width: 640px)
+    section.curator
+        div.container
+            grid-template-columns: 1fr
+        div.text
+            margin: unset
+        div.background
+            position: relative

@@ -1,0 +1,294 @@
+// Общее 
+@import common/_variables
+@import common/_mixins
+
+//Секции
+
+@import sections/_main
+@import sections/_reviews
+@import sections/_reserve
+@import sections/_conditions
+
+section.what
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+    
+    div.container
+        padding: 20px 22px 20px 37px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $new-05
+        display: grid
+        align-items: start
+        grid-template-columns: 1fr max-content
+        border-radius: 20px
+        +screen(s)
+            border-radius: 8px
+            grid-template-columns: 1fr
+            grid-gap: 30px
+            padding: 20px 16px
+
+    div.text
+        display: grid
+        grid-gap: 24px
+        max-width: 584px
+
+        strong
+            display: block
+            margin-bottom: 12px
+
+        ul
+            display: grid
+            grid-gap: 16px
+            color: #215b47
+            li
+                display: grid
+                grid-template-columns: max-content auto
+                grid-gap: 8px
+                img
+                    position: relative
+                    margin-top: -6px
+
+    div.action
+        padding: 46px 50px 42px
+        display: grid
+        grid-gap: 34px
+        align-self: stretch
+        align-content: center
+        justify-items: center
+        border-radius: 20px
+        height: 316px
+        background: $new-02
+        color: $color-06
+        text-align: center
+        +screen(m)
+            grid-gap: 20px
+            padding: 20px 16px
+            height: auto
+
+section.programs
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+        
+    div.container
+        display: grid
+        grid-gap: 44px
+        +screen(m)
+            grid-gap: 24px
+    div.text
+        display: grid
+        grid-gap: 10px
+    div.swiper
+        width: 100%
+        min-width: 0
+        overflow: visible
+
+section.benefit
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        align-content: center
+        justify-items: center
+        grid-gap: 15px
+        color: white
+        text-align: center
+        border-radius: 16px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $new-11
+        height: 200px
+        background-image: url(../images/leafs.png)
+        background-position: bottom -83px right -46px
+        background-repeat: no-repeat
+        +screen(m)
+            height: auto
+            padding: 50px 16px
+    button
+        padding-left: 40px
+        padding-right: 40px
+
+section.bonuses
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-gap: 16px
+    div.list
+        position: relative
+        display: grid
+        grid-template-columns: 1fr 2fr
+        grid-gap: 40px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+    div.swiper
+        width: 100%
+        min-width: 0
+        overflow: visible
+    div.discounts
+        border-radius: 20px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $new-05
+        padding: 34px 20px
+        h3
+            color: $new-04
+            margin-bottom: 3px
+        span
+            display: block
+        a
+            display: inline-block
+            border-bottom: 1px solid $color-04
+            &:hover
+                border-bottom: 1px solid transparent
+        ul
+            display: grid
+            grid-gap: 26px
+            margin-top: 20px
+            li
+                display: grid
+                grid-template-columns: max-content auto
+                grid-gap: 24px
+            div.icon
+                position: relative
+                width: 30px
+                height: 30px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+                    object-position: center center
+                &:before
+                    content: attr(data-percents)
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    font-weight: 500
+                    font-size: 11px
+                    letter-spacing: -0.06em
+                    color: #215b47
+    div.percents
+        display: inline-grid
+        align-content: center
+        justify-items: center
+        position: absolute
+        top: -70px
+        right: -70px
+        width: 140px
+        height: 140px
+        border-radius: 100%
+        background: $new-02
+        font-weight: 400
+        font-size: 24px
+        line-height: 100%
+        letter-spacing: -0.05em
+        text-align: center
+        color: #fdfdfd
+        z-index: 1
+        +screen(l)
+            top: 10px
+            right: 10px
+            font-size: 16px
+            width: 80px
+            height: 80px
+        +screen(m)
+            display: none
+        b
+            font-weight: 500
+            font-size: 28px
+            +screen(l)
+                font-size: 18px
+
+section.therapy
+    margin-top: 70px
+    margin-bottom: 70px
+    padding-top: 70px
+    padding-bottom: 70px
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+    background: $new-06
+    +screen(m)
+        padding-top: 60px
+        padding-bottom: 60px
+        margin-top: 60px
+        margin-bottom: 60px
+
+    div.container
+        display: grid
+        grid-gap: 26px
+
+    h2
+        color: $color-06
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 40px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+        +screen(s)
+            grid-template-columns: 1fr
+
+    div.benefit
+        margin-top: calc(70px - 26px)
+        display: grid
+        align-content: center
+        justify-items: center
+        grid-gap: 15px
+        color: white
+        text-align: center
+        border-radius: 16px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: #e8cac3
+        height: 200px
+        padding: 20px 16px
+        background-image: url(../images/leafs.png)
+        background-position: bottom -83px right -46px
+        background-repeat: no-repeat
+        +screen(m)
+            margin-top: calc(60px - 26px)
+        button
+            padding-left: 40px
+            padding-right: 40px
+   
+section.additions
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+    
+    div.container
+        display: grid
+        grid-gap: 20px
+    div.swiper
+        width: 100%
+        min-width: 0
+        overflow: visible
+    div.advantage
+        &:nth-child(2) div.icon
+            background: $new-02
+        &:nth-child(3) div.icon
+            background: $new-02
+        &:nth-child(4) div.icon
+            background: $new-07
+        &:nth-child(5) div.icon
+            background: $new-06
+
+
+
+
+

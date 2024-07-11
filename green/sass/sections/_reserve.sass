@@ -1,0 +1,44 @@
+section.reserve
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 60px
+        margin-bottom: 60px
+        
+    div.container
+        display: grid
+        align-content: center
+        justify-items: center
+        grid-gap: 24px
+        color: white
+        text-align: center
+        border-radius: 16px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $new-12
+        height: 314px
+        background-image: url(../images/leafs.png)
+        background-blend-mode: multiply
+        background-position: bottom -83px right -46px
+        background-repeat: no-repeat
+        +screen(m)
+            height: auto
+            padding: 36px 16px
+    h2
+        margin-bottom: 10px
+    form
+        display: grid
+        grid-template-columns: 1fr 1fr max-content
+        grid-gap: 32px
+        width: 100%
+        max-width: 695px
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 16px
+            max-width: 380px
+        button
+            +screen(m)
+                justify-self: center
+                width: 100%
+    div.note
+        display: grid
+        color: $new-05

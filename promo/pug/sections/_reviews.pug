@@ -1,0 +1,23 @@
+section.reviews
+    div.container
+        div.title
+            h2 Отзывы
+            div.swiper-navigation
+                div.arrow
+                    include ../../images/swiper_arrow.svg
+                div.arrow
+                    include ../../images/swiper_arrow.svg
+        div.swiper
+            div.swiper-wrapper
+                - for (var x = 0; x < 12; x++)
+                    div.swiper-slide
+                        strong Елена Рэйтер
+                        span.date 11.08.23
+                        div.stars
+                            include ../../images/star.svg
+                            include ../../images/star.svg
+                            include ../../images/star.svg
+                            include ../../images/star.svg
+                            include ../../images/star.svg
+                        p Отдыхали в санатории с ребенком. Доброжелательный персонал, готовы помочь по любому вопросу. Чистый уютный номер. Особо стоит отметить отличную лечебную базу. Врачи настоящие профессионалы... 
+                        a.blue Читать полностью 

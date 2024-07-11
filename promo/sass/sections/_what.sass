@@ -1,0 +1,95 @@
+section.what
+    margin-top: var(--section-between-gap)
+    margin-bottom: var(--section-between-gap)
+    div.container
+        display: grid
+        grid-gap: calc(var(--section-side-gap) * 2)
+    div.text
+        display: grid
+        grid-gap: var(--section-side-gap)
+        text-align: center
+        span
+            @include font(20px, 28px)
+            color: #424242
+    div.list
+        display: grid
+        grid-template-columns: 1fr max-content 1fr max-content 1fr
+        grid-gap: var(--section-side-gap)
+        & > span
+            @include font(60px, 80px)
+            align-self: center
+            font-weight: 700
+            margin-top: -2rem
+    div.item
+        position: relative
+        display: grid
+        grid-gap: 1rem
+        @include font(18px, 22px)
+        img
+            width: 100%
+            aspect-ratio: 4 / 3
+            object-fit: cover
+            object-position: center center
+            border-radius: 12px
+    div.bonus
+        display: grid
+        align-items: center
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-areas: 'A B' 'C B'
+        grid-gap: var(--section-side-gap)
+        div.note
+            grid-area: A
+            display: grid
+            grid-template-columns: max-content 1fr
+            grid-gap: 1rem
+            @include font(24px, 28px)
+        button
+            grid-area: C
+            justify-self: start
+        div.discount
+            display: grid
+            justify-content: center
+            grid-gap: 1rem
+            position: relative
+            grid-area: B
+            span
+                line-height: 1em
+                @include font(24px, 28px)
+            strong
+                line-height: 1em
+                font-weight: 500
+                @include font(48px, 60px)
+            small
+                @include font(16px, 20px)
+                font-weight: 500
+            img
+                position: absolute
+                top: -10%
+                left: -10%
+                height: 120%
+                width: 120%
+                object-fit: contain
+                object-position: center center
+                z-index: -1
+                
+@media (max-width: 640px)
+    section.what
+        div.list
+            text-align: center
+            grid-template-columns: 1fr
+            justify-items: center
+        div.item
+            img
+                aspect-ratio: 16 / 9
+        div.bonus
+            grid-template-columns: 1fr
+            grid-template-areas: 'A' 'C' 'B'
+            button
+                justify-self: center
+            div.note
+                grid-template-columns: 1fr
+                justify-items: center
+                text-align: center
+            div.discount
+                margin-top: var(--section-between-gap)
+                text-align: center
