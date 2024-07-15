@@ -615,6 +615,39 @@ div.advantage div.icon {
   background: #869b97;
 }
 
+div.toolbar_note {
+  cursor: pointer;
+  display: inline-grid;
+  position: relative;
+}
+div.toolbar_note div.toolbar_text {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  color: #000;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  width: 200px;
+  z-index: 9;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 12px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+div.toolbar_note:hover div.toolbar_text {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
 html:has(dialog[open]) {
   overflow-y: hidden;
   margin-right: var(--scrollbar-width);

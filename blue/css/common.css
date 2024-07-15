@@ -132,22 +132,11 @@ html, body {
   color: #212121;
   font-size: 14px;
   background: #f3f3f3;
+  line-height: normal !important;
 }
 
 section, header, footer {
   position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns: [full-start] var(--full) [breakout-start] var(--breakout) [content-start] var(--content) [content-end] var(--breakout) [breakout-end] var(--full) [full-end];
-}
-section > *, header > *, footer > * {
-  grid-column: content;
-}
-section .full, header .full, footer .full {
-  grid-column: full;
-}
-section .breakout, header .breakout, footer .breakout {
-  grid-column: breakout;
 }
 
 h1, h2, h3, h4 {
@@ -187,6 +176,14 @@ h3 {
 a {
   cursor: pointer;
 }
+a:hover {
+  color: #008ed3;
+  text-decoration: none;
+}
+
+li::marker {
+  color: #008ed3;
+}
 
 input {
   border: 1px solid #00a1ff;
@@ -218,6 +215,10 @@ input::placeholder {
   font-weight: 400;
   font-size: 14px;
   color: #63666a;
+}
+
+strong, b {
+  font-weight: 700;
 }
 
 button, a.button {
@@ -271,6 +272,7 @@ a.program {
   background: #fff;
   overflow: clip;
   height: 100%;
+  text-decoration: unset;
 }
 a.program img {
   width: 100%;
@@ -285,6 +287,12 @@ a.program div.text {
   grid-gap: 5px;
   padding: 20px 26px 34px;
 }
+a.program:hover {
+  color: inherit;
+}
+a.program:hover h3 {
+  color: #00a1ff;
+}
 
 a.program_full, a.complex_full {
   display: block;
@@ -293,6 +301,7 @@ a.program_full, a.complex_full {
           box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   background: #f4f2f2;
   overflow: clip;
+  text-decoration: unset;
 }
 a.program_full div.image, a.complex_full div.image {
   position: relative;
@@ -348,13 +357,13 @@ a.program_full div.description ul, a.complex_full div.description ul {
   grid-gap: 12px;
   font-weight: 400;
   font-size: 14px;
-  color: #212121;
 }
 a.program_full div.description ul li, a.complex_full div.description ul li {
   display: grid;
   grid-template-columns: -webkit-max-content auto;
   grid-template-columns: max-content auto;
   grid-gap: 8px;
+  color: inherit !important;
 }
 a.program_full div.description div.price, a.complex_full div.description div.price {
   display: grid;
@@ -445,6 +454,9 @@ a.program_full div.additional div.level div.low div:nth-child(2), a.complex_full
 a.program_full div.additional div.level div.middle div:nth-child(3), a.complex_full div.additional div.level div.middle div:nth-child(3) {
   background: transparent;
 }
+a.program_full:hover, a.complex_full:hover {
+  color: inherit;
+}
 a.program_full:hover div.description, a.complex_full:hover div.description {
   grid-gap: 16px;
 }
@@ -521,6 +533,7 @@ a.therapy {
           box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   background: #fff;
   overflow: clip;
+  text-decoration: unset;
 }
 a.therapy img {
   width: 100%;
@@ -556,8 +569,12 @@ div.bonus img {
 }
 div.bonus div.text {
   display: grid;
-  grid-gap: 15px;
-  padding: 20px 26px 34px;
+  grid-gap: 8px;
+  padding: 20px 26px 26px;
+}
+div.bonus div.text h3 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 div.review {
@@ -658,12 +675,22 @@ div.toolbar_note div.toolbar_text {
           transform: translateX(-50%);
   opacity: 0;
   pointer-events: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 div.toolbar_note:hover div.toolbar_text {
   opacity: 1;
   pointer-events: auto;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+}
+@media (max-width: 960px) {
+  div.toolbar_note div.toolbar_text {
+    opacity: 0 !important;
+    pointer-events: auto;
+  }
+  div.toolbar_note.show div.toolbar_text {
+    opacity: 1 !important;
+    pointer-events: auto;
+  }
 }
 
 html:has(dialog[open]) {

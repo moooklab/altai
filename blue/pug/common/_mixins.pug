@@ -23,7 +23,7 @@ mixin program_full(image, date, title, price, level)
                             span Не требует санаторно-курортной карты
                     div.price
                         span.price= price
-                        div.toolbar_note
+                        div(onclick="this.classList.toggle('show')").toolbar_note
                             img(src="images/question.svg", alt="")
                             div.toolbar_text
                                 span Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
@@ -59,7 +59,7 @@ mixin complex_full(image, date, title, price)
                 div.overflow
                     div.price
                         span.price= price
-                        div.toolbar_note
+                        div(onclick="this.classList.toggle('show')").toolbar_note
                             img(src="images/question.svg", alt="")
                             div.toolbar_text
                                 span Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
@@ -98,4 +98,4 @@ mixin review(name, date, text)
 mixin advantage(icon, text)
     div.advantage
         div.icon: img(src=icon, alt="")
-        span= text
+        span !{text}

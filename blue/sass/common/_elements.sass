@@ -3,6 +3,7 @@ h1, h2, h3, h4
     font-style: normal
     font-weight: 500
     text-transform: uppercase
+    // line-height: 1.2em
 
 h1
     font-size: 46px
@@ -21,6 +22,13 @@ h3
 
 a
     cursor: pointer
+    &:hover
+        color: $color-07
+        text-decoration: none
+
+li
+    &::marker
+        color: $color-07
 
 input
     border: 1px solid $color-01
@@ -31,6 +39,9 @@ input
         font-weight: 400
         font-size: 14px
         color: $color-05
+
+strong, b
+    font-weight: 700
 
 button, a.button
     cursor: pointer
@@ -70,6 +81,7 @@ a.program
     background: $color-06
     overflow: clip
     height: 100%
+    text-decoration: unset
     img
         width: 100%
         height: 210px
@@ -79,6 +91,10 @@ a.program
         display: grid
         grid-gap: 5px
         padding: 20px 26px 34px
+    &:hover
+        color: inherit
+        h3
+            color: $color-01
 
 a.program_full
     display: block
@@ -86,6 +102,7 @@ a.program_full
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
     background: $new-05
     overflow: clip
+    text-decoration: unset
     div.image
         position: relative
         height: 210px
@@ -125,11 +142,11 @@ a.program_full
             grid-gap: 12px
             font-weight: 400
             font-size: 14px
-            color: $color-04
             li
                 display: grid
                 grid-template-columns: max-content auto
                 grid-gap: 8px
+                color: inherit !important
         div.price
             display: grid
             grid-auto-flow: column
@@ -196,6 +213,7 @@ a.program_full
                         background: transparent
 
     &:hover
+        color: inherit
         div.description
             grid-gap: 16px
             div.wrap
@@ -244,7 +262,6 @@ a.complex_full
             overflow: hidden
         100%
             overflow: visible
-            
 
 a.therapy
     display: block
@@ -252,6 +269,7 @@ a.therapy
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
     background: $color-06
     overflow: clip
+    text-decoration: unset
     img
         width: 100%
         height: 210px
@@ -277,8 +295,11 @@ div.bonus
         object-position: center center
     div.text
         display: grid
-        grid-gap: 15px
-        padding: 20px 26px 34px
+        grid-gap: 8px
+        padding: 20px 26px 26px
+        h3
+            font-size: 24px
+            font-weight: 700
 
 div.review
     display: grid
@@ -354,11 +375,20 @@ div.toolbar_note
         transform: translateX(-50%)
         opacity: 0
         pointer-events: none
+        transition: all .2s
     &:hover
         div.toolbar_text
             opacity: 1
             pointer-events: auto
-            transition: all .2s
+    +screen(m)
+        div.toolbar_text
+            opacity: 0 !important
+            pointer-events: auto
+        &.show
+            div.toolbar_text
+                opacity: 1 !important
+                pointer-events: auto
+
 
 
 

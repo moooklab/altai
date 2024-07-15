@@ -41,6 +41,7 @@ section.main div.text {
 }
 section.main div.text h1 {
   text-align: right;
+  color: #fff;
 }
 section.main div.text span {
   font-weight: 500;
@@ -111,6 +112,14 @@ section.reviews div.title a.button {
 }
 section.reviews div.title a.button svg path {
   fill: #008ed3;
+}
+section.reviews div.title a.button:hover {
+  background: #00a1ff;
+  border: 1px solid #00a1ff;
+  color: #fff !important;
+}
+section.reviews div.title a.button:hover svg path {
+  fill: #fff;
 }
 section.reviews div.slider {
   display: grid;
@@ -296,7 +305,7 @@ section.conditions div.list {
 section.conditions ul li {
   list-style-type: disc;
   margin-left: 1.75em;
-  color: #008ed3;
+  color: inherit !important;
 }
 
 section.what {
@@ -372,6 +381,7 @@ section.what div.text ul li {
   grid-template-columns: -webkit-max-content auto;
   grid-template-columns: max-content auto;
   grid-gap: 8px;
+  color: inherit !important;
 }
 @media (max-width: 960px) {
   section.what div.text ul li {
@@ -545,10 +555,6 @@ section.bonuses div.discounts span {
 }
 section.bonuses div.discounts a {
   display: inline-block;
-  border-bottom: 1px solid #212121;
-}
-section.bonuses div.discounts a:hover {
-  border-bottom: 1px solid transparent;
 }
 section.bonuses div.discounts ul {
   display: grid;

@@ -11,20 +11,20 @@ block content
             img(src="images/main2.webp", alt="", style="object-position: 25% center")
             div.text
                 h1 медиана — управляй своим возрастом
-                span 50 лет – медиана вашей здоровой и счастливой жизни
+                span 50 лет – медиана вашей здоровой #[br]и счастливой жизни
 
     section.age
         div.container
-            h2 управляй возрастом 50+
+            h2 Управляй возрастом 50+
             div.text
                 div.left
-                    p Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
+                    p Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться #[br]на душевное равновесие.
                     img(src="images/21.webp", alt="")
                 div.right
                     strong Ваш возраст - это ваши дополнительные возможности!
-                    span Используйте скидку 10% на качественный и полезный отдых - только для гостей от 50 лет.
+                    span Используйте скидку 10% на качественный и полезный отдых - #[br]только для гостей от 50 лет.
                     h3 Цена путевки на 3 дня от 15 930 ₽
-                        div.toolbar_note
+                        div(onclick="this.classList.toggle('show')").toolbar_note
                             img(src="images/question.svg", alt="")
                             div.toolbar_text
                                 span Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
@@ -128,7 +128,7 @@ block content
                         li: span Питание в ресторане
                         li: span Бесплатные услуги по стирке в прачечной без ограничения
                     h3 Персональный ассистент
-                        div.toolbar_note
+                        div(onclick="this.classList.toggle('show')").toolbar_note
                             img(src="images/question.svg", alt="")
                             div.toolbar_text
                                 span Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
@@ -162,14 +162,13 @@ block content
             div.swiper
                 div.swiper-wrapper
                     div.swiper-slide: +advantage('images/percents_10.svg', 'Скидка 10% для гостей старше 50 лет на все программы и любые категории номеров')
-                    div.swiper-slide: +advantage('images/percents_15.svg', 'Дополнительная скидка по программе лояльности — до 15% ')
+                    div.swiper-slide: +advantage('images/percents_15.svg', 'Дополнительная скидка по программе лояльности — до <br/>15% ')
                     div.swiper-slide: +advantage('images/sofa_2.svg', 'Стоимость путевки рассчитана для 1 гостя при размещении на основном месте в номере «Семейный 1-комнатный (без балкона)»')
                     div.swiper-slide: +advantage('images/calendar.svg', 'Минимально возможное количество дней пребывания соответствуют представленным программам')
                     div.swiper-slide: +advantage('images/world.svg', 'Акция действительна при покупке на сайте или по номеру горячей линии 8 800 550 0880')
 
-    include sections/_reserve.pug
-
     include sections/_conditions.pug
+    include sections/_reserve.pug
 
     
 
