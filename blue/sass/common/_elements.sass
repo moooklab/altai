@@ -130,13 +130,19 @@ a.program_full
                 display: grid
                 grid-template-columns: max-content auto
                 grid-gap: 8px
-        span.price
-            display: block
-            font-weight: 500
-            font-size: 18px
-            text-transform: uppercase
-            color: $color-04
+        div.price
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            align-items: center
+            grid-gap: 12px
             margin-top: 32px
+            span.price
+                display: block
+                font-weight: 500
+                font-size: 18px
+                text-transform: uppercase
+                color: $color-04
     div.additional
         padding: 0px 26px 14px
         display: grid
@@ -194,6 +200,11 @@ a.program_full
             grid-gap: 16px
             div.wrap
                 grid-template-rows: 1fr
+                div.overflow
+                    animation-name: overflow_disable
+                    animation-fill-mode: forwards
+                    animation-duration: .1s
+                    animation-delay: .2s
         div.additional
             button
                 padding-left: 32px
@@ -201,7 +212,7 @@ a.program_full
                 background: $color-07
                 color: $new-05
                 &:hover
-                    background: $new-08
+                    background: $color-01
             div.level
                 span
                     opacity: 1
@@ -215,11 +226,25 @@ a.program_full
             button
                 padding-left: 32px
                 padding-right: 32px
-                background: $new-02
+                background: $color-07
                 color: $new-05
+                &:hover
+                    background: $color-01
             div.level
                 span
                     opacity: 1
+
+a.complex_full
+    @extend .program_full
+    div.description
+        div.price
+            margin-top: 4px
+    @keyframes overflow_disable
+        0%
+            overflow: hidden
+        100%
+            overflow: visible
+            
 
 a.therapy
     display: block
@@ -308,6 +333,32 @@ div.advantage
         height: 160px
         background: $color-06
 
+div.toolbar_note
+    cursor: pointer
+    display: inline-grid
+    position: relative
+    div.toolbar_text
+        position: absolute
+        left: 50%
+        bottom: calc(100% + 12px)
+        color: #000
+        font-size: 14px
+        line-height: 1.2
+        font-weight: 400
+        width: 200px
+        z-index: 9
+        background-color: #fff
+        box-shadow: 0px 6px 12px 0 rgba(0,0,0,0.2)
+        border-radius: 4px
+        padding: 12px
+        transform: translateX(-50%)
+        opacity: 0
+        pointer-events: none
+    &:hover
+        div.toolbar_text
+            opacity: 1
+            pointer-events: auto
+            transition: all .2s
 
 
 

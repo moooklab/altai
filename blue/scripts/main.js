@@ -31,6 +31,10 @@ new Swiper('section.service div.swiper', {
 new Swiper('section.programs div.swiper.line', {
     slidesPerView: 1.1,
     spaceBetween: '10px',
+    navigation: {
+        prevEl: document.querySelector('section.programs div.swiper-navigation > *:first-child'),
+        nextEl: document.querySelector('section.programs div.swiper-navigation > *:last-child')
+    },
     breakpoints: {
         640: {
             slidesPerView: 2.2,
@@ -73,6 +77,10 @@ new Swiper('section.programs div.swiper.grid', {
 new Swiper('section.therapy div.swiper', {
     slidesPerView: 1.1,
     spaceBetween: '10px',
+    navigation: {
+        prevEl: document.querySelector('section.therapy div.swiper-navigation > *:first-child'),
+        nextEl: document.querySelector('section.therapy div.swiper-navigation > *:last-child')
+    },
     breakpoints: {
         640: {
             slidesPerView: 2.2,

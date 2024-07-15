@@ -23,7 +23,11 @@ block content
                 div.right
                     strong Ваш возраст - это ваши дополнительные возможности!
                     span Используйте скидку 10% на качественный и полезный отдых - только для гостей от 50 лет.
-                    h3 Цена путевки на 3 дня от 15 930 ₽ #[div.note: img(src="images/question.svg", alt="")]
+                    h3 Цена путевки на 3 дня от 15 930 ₽
+                        div.toolbar_note
+                            img(src="images/question.svg", alt="")
+                            div.toolbar_text
+                                span Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
                     ul
                         li 
                             img(src="images/horn.svg", alt="")
@@ -53,26 +57,40 @@ block content
     section.programs
         div.container
             h2 Рекомендуемые программы
-            div.swiper.line
-                div.swiper-wrapper
-                    div.swiper-slide: +program_full('images/15.webp', 'От 7 дней', 'Здоровье стандарт', '26 056 ₽', 'high')
-                    div.swiper-slide: +program_full('images/16.webp', 'От 10 дней', 'Здоровье плюс', '36 056 ₽', 'low')
-                    div.swiper-slide: +program_full('images/17.webp', 'От 10 дней', 'Здоровый позвоночник и суставы', '46 056 ₽', 'middle')
+            div.slider
+                div.swiper.line
+                    div.swiper-wrapper
+                        div.swiper-slide: +program_full('images/15.webp', 'От 7 дней', 'Здоровье стандарт', '26 056 ₽', 'high')
+                        div.swiper-slide: +program_full('images/16.webp', 'От 10 дней', 'Здоровье плюс', '36 056 ₽', 'low')
+                        div.swiper-slide: +program_full('images/17.webp', 'От 10 дней', 'Здоровый позвоночник и суставы', '46 056 ₽', 'middle')
+                        div.swiper-slide: +program_full('images/15.webp', 'От 7 дней', 'Здоровье стандарт', '26 056 ₽', 'high')
+                        div.swiper-slide: +program_full('images/16.webp', 'От 10 дней', 'Здоровье плюс', '36 056 ₽', 'low')
+                        div.swiper-slide: +program_full('images/17.webp', 'От 10 дней', 'Здоровый позвоночник и суставы', '46 056 ₽', 'middle')
+                div.swiper-navigation
+                    div.arrow: include ../images/arrow.svg
+                    div.arrow: include ../images/arrow.svg
 
     section.therapy
         div.container
             div.text
                 h2 Комплексы интенсивного восстановления
                 span Дополнительные пакеты процедур, усиливающие лечение. Приобретаются отдельно.
-            div.swiper
-                    div.swiper-wrapper
-                        div.swiper-slide: +program_full('images/18.webp', 'От 7 дней', 'Здоровье глаз', '26 056 ₽')
-                        div.swiper-slide: +program_full('images/19.webp', 'От 10 дней', 'Перезагрузка', '36 056 ₽')
-                        div.swiper-slide: +program_full('images/20.webp', '3 - 10 дней', 'Здоровая спина', '46 056 ₽')
+            div.slider
+                div.swiper
+                        div.swiper-wrapper
+                            div.swiper-slide: +complex_full('images/18.webp', 'От 7 дней', 'Здоровье глаз', '26 056 ₽')
+                            div.swiper-slide: +complex_full('images/19.webp', 'От 10 дней', 'Перезагрузка', '36 056 ₽')
+                            div.swiper-slide: +complex_full('images/20.webp', '3 - 10 дней', 'Здоровая спина', '46 056 ₽')
+                            div.swiper-slide: +complex_full('images/18.webp', 'От 7 дней', 'Здоровье глаз', '26 056 ₽')
+                            div.swiper-slide: +complex_full('images/19.webp', 'От 10 дней', 'Перезагрузка', '36 056 ₽')
+                            div.swiper-slide: +complex_full('images/20.webp', '3 - 10 дней', 'Здоровая спина', '46 056 ₽')
+                div.swiper-navigation
+                    div.arrow: include ../images/arrow.svg
+                    div.arrow: include ../images/arrow.svg
 
     section.healing
         div.container
-            h2 Лечение в современному санатории
+            h2 Преимущества нового медицинского центра
             div.list
                 div
                     img(src="images/sofa.svg", alt="")
@@ -109,7 +127,11 @@ block content
                         li: span от 22 до 95 кв.м.
                         li: span Питание в ресторане
                         li: span Бесплатные услуги по стирке в прачечной без ограничения
-                    h3 Персональный ассистент #[div.note: img(src="images/question.svg", alt="")]
+                    h3 Персональный ассистент
+                        div.toolbar_note
+                            img(src="images/question.svg", alt="")
+                            div.toolbar_text
+                                span Пора уделить время себе, ведь медиана - идеальный момент, чтобы укрепить здоровье, сохранить красоту и настроиться на душевное равновесие.
                 div.slider
                     div.swiper
                         div.swiper-wrapper
@@ -132,8 +154,8 @@ block content
                 div.play
                     div(onclick="this.parentNode.nextElementSibling.pause(); this.parentNode.classList.remove('played')").overlay
                     div(onclick="this.parentNode.nextElementSibling.play(); this.parentNode.classList.add('played')").icon: img(src="images/play.svg", alt="")
-                video(poster="images/main.webp", loop, playsinline )
-                    source(src="images/test.mp4", type="video/mp4")
+                video(poster="images/video.webp", loop, playsinline )
+                    source(src="https://rodnik-altaya.com//upload/iblock/ed3/czqxrnm4mmlsg3itye0vzzy0cfbg1c59/Ekskursiya_v2_old_logo_1_.mp4", type="video/mp4")
 
     section.additions
         div.container
@@ -147,7 +169,9 @@ block content
 
     include sections/_reserve.pug
 
-    //- include sections/_conditions.pug
+    include sections/_conditions.pug
+
+    
 
 
 

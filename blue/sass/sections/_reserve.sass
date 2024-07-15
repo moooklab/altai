@@ -20,14 +20,18 @@ section.reserve
             padding: 36px 16px
 
     div.text
-        margin-bottom: 20px
+        margin-bottom: 14px
         h2
             margin-bottom: 10px
+            +screen(m)
+                margin-bottom: unset
         p
             font-size: 20px
             text-transform: uppercase
             text-align: center
             color: $color-05
+            +screen(m)
+                display: none
 
     form
         display: grid
@@ -44,9 +48,14 @@ section.reserve
             +screen(m)
                 justify-self: center
                 width: 100%
+
     div.note
         display: grid
         font-size: 12px
         line-height: 133%
         text-align: center
         color: #727272
+        a
+            text-decoration: underline
+            &:hover
+                text-decoration: none

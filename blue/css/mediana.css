@@ -96,6 +96,13 @@ section.reviews div.title img {
   background-color: white;
   border-radius: 10px;
 }
+@media (max-width: 960px) {
+  section.reviews div.title img {
+    padding: unset;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+  }
+}
 section.reviews div.title a.button {
   min-width: 228px;
   background: transparent;
@@ -202,16 +209,26 @@ section.reserve div.container {
   }
 }
 section.reserve div.text {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 section.reserve div.text h2 {
   margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+  section.reserve div.text h2 {
+    margin-bottom: unset;
+  }
 }
 section.reserve div.text p {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
   color: #63666a;
+}
+@media (max-width: 960px) {
+  section.reserve div.text p {
+    display: none;
+  }
 }
 section.reserve form {
   display: grid;
@@ -244,6 +261,12 @@ section.reserve div.note {
   text-align: center;
   color: #727272;
 }
+section.reserve div.note a {
+  text-decoration: underline;
+}
+section.reserve div.note a:hover {
+  text-decoration: none;
+}
 
 section.conditions {
   margin-bottom: 70px;
@@ -273,6 +296,7 @@ section.conditions div.list {
 section.conditions ul li {
   list-style-type: disc;
   margin-left: 1.75em;
+  color: #008ed3;
 }
 
 section.age {
@@ -370,6 +394,9 @@ section.age div.text ul {
 }
 section.age div.text ul li {
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   grid-template-columns: -webkit-max-content auto;
   grid-template-columns: max-content auto;
   grid-gap: 8px;
@@ -382,7 +409,6 @@ section.age div.text ul li img {
   -o-object-position: center center;
      object-position: center center;
   position: relative;
-  margin-top: -6px;
 }
 section.age div.banner {
   display: grid;
@@ -400,6 +426,12 @@ section.age div.banner {
   color: #fff;
   padding: 18px 32px;
   text-align: center;
+}
+@media (max-width: 640px) {
+  section.age div.banner h3 {
+    max-width: 180px;
+    margin: auto;
+  }
 }
 section.age div.banner b {
   display: block;
@@ -432,10 +464,49 @@ section.programs div.container {
   display: grid;
   grid-gap: 24px;
 }
+section.programs div.slider {
+  position: relative;
+  display: grid;
+}
 section.programs div.swiper {
   width: 100%;
   min-width: 0;
-  overflow: visible;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  padding: 5px;
+}
+section.programs div.swiper-navigation {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 100px;
+  left: -52px;
+  width: calc(100% + 64px + 40px);
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  z-index: 1;
+  pointer-events: none;
+}
+section.programs div.swiper-navigation > *:first-child svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+section.programs div.swiper-navigation > * {
+  pointer-events: auto;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+section.programs div.swiper-navigation > *:hover svg path {
+  fill: #008ed3;
+}
+section.programs div.swiper-navigation > * svg {
+  width: 100%;
+  height: 100%;
 }
 
 section.callback {
@@ -456,7 +527,7 @@ section.callback div.container {
           box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 46px;
-  padding-bottom: 12px;
+  padding-bottom: 18px;
 }
 @media (max-width: 960px) {
   section.callback div.container {
@@ -474,6 +545,7 @@ section.callback h3 {
 @media (max-width: 960px) {
   section.callback h3 {
     font-size: 20px;
+    margin-top: 1.2em;
   }
 }
 section.callback ul {
@@ -493,6 +565,7 @@ section.callback ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    grid-gap: 16px;
   }
 }
 section.callback ul li {
@@ -576,8 +649,6 @@ section.service {
   section.service {
     margin-top: 60px;
     margin-bottom: 60px;
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 section.service div.container {
@@ -600,7 +671,7 @@ section.service div.advantages {
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   background: #fff;
-  padding: 28px 38px;
+  padding: 28px 20px 20px 38px;
 }
 @media (max-width: 960px) {
   section.service div.advantages {
@@ -634,11 +705,13 @@ section.service div.advantages ul {
   gap: 8px;
 }
 section.service div.advantages ul li {
+  font-size: 16px;
   list-style-type: disc;
   margin-left: 1.75em;
+  color: #008ed3;
 }
 section.service div.advantages ul li span {
-  color: #212121;
+  color: #008ed3;
 }
 section.service div.slider {
   display: grid;
@@ -726,14 +799,19 @@ section.service div.slider div.swiper-navigation > * {
   height: 32px;
 }
 section.service div.slider div.swiper-navigation > *:hover svg path {
-  stroke: #008ed3;
+  fill: #008ed3;
 }
 section.service div.slider div.swiper-navigation > * svg {
   width: 100%;
   height: 100%;
 }
 section.service div.slider div.swiper-navigation > * svg path {
-  stroke: #00a1ff;
+  fill: #00a1ff;
+}
+@media (max-width: 960px) {
+  section.service div.slider div.swiper-navigation > * svg path {
+    fill: black;
+  }
 }
 
 section.excursion {
@@ -815,10 +893,49 @@ section.therapy div.text {
   display: grid;
   grid-gap: 10px;
 }
+section.therapy div.slider {
+  position: relative;
+  display: grid;
+}
 section.therapy div.swiper {
   width: 100%;
   min-width: 0;
-  overflow: visible;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  padding: 5px;
+}
+section.therapy div.swiper-navigation {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 100px;
+  left: -52px;
+  width: calc(100% + 64px + 40px);
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  z-index: 1;
+  pointer-events: none;
+}
+section.therapy div.swiper-navigation > *:first-child svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+section.therapy div.swiper-navigation > * {
+  pointer-events: auto;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+section.therapy div.swiper-navigation > *:hover svg path {
+  fill: #008ed3;
+}
+section.therapy div.swiper-navigation > * svg {
+  width: 100%;
+  height: 100%;
 }
 
 section.advantages {

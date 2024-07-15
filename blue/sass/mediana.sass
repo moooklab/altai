@@ -79,6 +79,7 @@ section.age
             color: $color-01
             li
                 display: grid
+                align-items: center
                 grid-template-columns: max-content auto
                 grid-gap: 8px
                 img
@@ -87,7 +88,7 @@ section.age
                     object-fit: contain
                     object-position: center center
                     position: relative
-                    margin-top: -6px
+
     div.banner
         display: grid
         grid-auto-flow: column
@@ -99,6 +100,10 @@ section.age
         color: $color-06
         padding: 18px 32px
         text-align: center
+        h3
+            +screen(s)
+                max-width: 180px
+                margin: auto
         b
             display: block
             font-weight: 900
@@ -115,13 +120,45 @@ section.programs
     +screen(m)
         margin-top: 60px
         margin-bottom: 60px
+    
     div.container
         display: grid
         grid-gap: 24px
+   
+    div.slider
+        position: relative
+        display: grid
+
     div.swiper
         width: 100%
         min-width: 0
-        overflow: visible
+        width: calc(100% + 10px)
+        margin-left: -5px
+        padding: 5px
+
+    div.swiper-navigation
+        user-select: none
+        position: absolute
+        top: 100px
+        left: calc(-32px - 20px)
+        width: calc(100% + 64px + 40px)
+        display: grid
+        grid-template-columns: 1fr max-content
+        z-index: 1
+        pointer-events: none
+        & > *:first-child svg
+            transform: rotate(180deg)
+        & > *
+            pointer-events: auto
+            cursor: pointer
+            width: 32px
+            height: 32px
+            &:hover
+                svg path
+                    fill: $color-07
+            svg
+                width: 100%
+                height: 100%
 
 section.callback
     margin-top: 70px
@@ -137,7 +174,7 @@ section.callback
         box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
         border-radius: 20px
         padding: 46px
-        padding-bottom: 12px
+        padding-bottom: 18px
         +screen(m)
             padding: 46px 16px
     h2
@@ -148,6 +185,7 @@ section.callback
         margin-bottom: 32px
         +screen(m)
             font-size: 20px
+            margin-top: 1.2em
     ul
         display: flex
         justify-content: center
@@ -156,6 +194,7 @@ section.callback
         margin-top: 46px
         +screen(s)
             flex-direction: column
+            grid-gap: 16px
         li
             list-style-type: disc
             margin-left: 1.75em
@@ -206,8 +245,6 @@ section.service
     +screen(m)
         margin-top: 60px
         margin-bottom: 60px
-        padding-top: 60px
-        padding-bottom: 60px
 
     div.container
         display: grid
@@ -225,7 +262,7 @@ section.service
         border-radius: 16px
         box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
         background: $color-06
-        padding: 28px 38px
+        padding: 28px 20px 20px 38px
         +screen(m)
             padding: 20px 16px
 
@@ -251,10 +288,12 @@ section.service
             color: $new-04
             gap: 8px
             li
+                font-size: 16px
                 list-style-type: disc
                 margin-left: 1.75em
+                color: $color-07
                 span
-                    color: $color-04
+                    color: $color-07
 
     div.slider
         display: grid
@@ -318,12 +357,15 @@ section.service
                 height: 32px
                 &:hover
                     svg path
-                        stroke: $color-07
+                        fill: $color-07
                 svg
                     width: 100%
                     height: 100%
                     path
-                        stroke: $color-01
+                        fill: $color-01
+                +screen(m)
+                    svg path
+                        fill: black
 
 section.excursion
     margin-top: 70px
@@ -386,10 +428,40 @@ section.therapy
         display: grid
         grid-gap: 10px
 
+    div.slider
+        position: relative
+        display: grid
+
     div.swiper
         width: 100%
         min-width: 0
-        overflow: visible
+        width: calc(100% + 10px)
+        margin-left: -5px
+        padding: 5px
+
+    div.swiper-navigation
+        user-select: none
+        position: absolute
+        top: 100px
+        left: calc(-32px - 20px)
+        width: calc(100% + 64px + 40px)
+        display: grid
+        grid-template-columns: 1fr max-content
+        z-index: 1
+        pointer-events: none
+        & > *:first-child svg
+            transform: rotate(180deg)
+        & > *
+            pointer-events: auto
+            cursor: pointer
+            width: 32px
+            height: 32px
+            &:hover
+                svg path
+                    fill: $color-07
+            svg
+                width: 100%
+                height: 100%
 
 section.advantages
     margin-top: 70px

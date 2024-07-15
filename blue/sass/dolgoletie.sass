@@ -32,28 +32,44 @@ section.what
 
     div.text
         display: grid
-        grid-gap: 24px
         max-width: 584px
+
+        h2
+            margin-bottom: 28px
+            +screen(m)
+                margin-bottom: 13px
 
         strong
             display: block
-            margin-bottom: 12px
+            margin-bottom: 16px
+            margin-top: 36px
+            +screen(m)
+                margin-top: 26px
+                margin-bottom: 26px
 
         ul
             display: grid
             grid-gap: 16px
             color: $color-07
+            margin-top: 32px
+            +screen(m)
+                margin-top: 28px
             li
                 display: grid
+                align-items: center
                 grid-template-columns: max-content auto
                 grid-gap: 8px
+                +screen(m)
+                    grid-gap: 18px
                 img
                     width: 30px
                     height: 30px
                     object-fit: contain
                     object-position: center center
                     position: relative
-                    margin-top: -6px
+                    +screen(m)
+                        width: 40px
+                        height: 40px
 
     div.action
         padding: 46px 50px 42px
@@ -99,6 +115,15 @@ section.benefit
         margin-top: 60px
         margin-bottom: 60px
 
+    h2
+        br
+            display: none
+            +screen(m)
+                display: block
+        span.blue
+            display: block
+            +screen(m)
+                color: $color-01
     div.container
         display: grid
         align-content: center
@@ -137,7 +162,7 @@ section.bonuses
         grid-gap: 40px
         +screen(m)
             grid-template-columns: 1fr
-            grid-gap: 10px
+            grid-gap: 20px
     div.swiper
         width: 100%
         min-width: 0
@@ -237,6 +262,11 @@ section.therapy
         +screen(s)
             grid-template-columns: 1fr
 
+    a.therapy
+        min-height: 340px
+        div.text
+            grid-gap: 22px
+
     div.benefit
         margin-top: calc(70px - 26px)
         display: grid
@@ -261,7 +291,11 @@ section.additions
     +screen(m)
         margin-top: 60px
         margin-bottom: 60px
-    
+
+    h2
+        span.blue
+            +screen(m)
+                color: $color-01
     div.container
         display: grid
         grid-gap: 20px

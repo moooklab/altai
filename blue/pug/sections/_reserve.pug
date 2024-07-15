@@ -5,10 +5,10 @@ section.reserve
             p Оставьте заявку и наши менеджеры проконсультируют вас
         form
             input(type="text", name="name", placeholder="Имя")
-            input(type="tel", name="phone", placeholder="+7 (999) 999-99-99")
+            input(type="tel", name="phone", placeholder="Телефон")
             button.blue
                 span Отправить
                 include ../../images/button_arrow.svg
         div.note
-            span Нажимая на кнопку "Отправить", я даю согласие на обработку персональных данных
+            span Нажимая на кнопку "Отправить", я даю согласие на #[a(href="/privacy/", target="_blank") обработку персональных данных]
             span * - обязательные поля для заполнения

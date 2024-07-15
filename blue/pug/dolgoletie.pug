@@ -8,7 +8,7 @@ block content
 
     section.main
         div.container
-            img(src="images/main.webp", alt="", style="object-position: 75% center")
+            img(src="images/main.webp", alt="", style="object-position: 25% center")
             div.text
                 h1 Сезон активного долголетия
                 span Ваш секрет отличного самочувствия и поющего настроения!
@@ -49,7 +49,7 @@ block content
 
     section.benefit
         div.container
-            h2 Получите выгодную стоимость путевки #[br]на 7  дней от 21 720 ₽
+            h2 Получите выгодную #[br]стоимость путевки #[span.blue на 7  дней от 27 720 ₽]
             button.blue
                 span Подробнее
                 include ../images/button_arrow.svg
@@ -72,16 +72,16 @@ block content
                             span проживание #[b с 23.11 по 26.12] максимальная скидка
                 div.swiper
                     div.swiper-wrapper
-                        div.swiper-slide: +bonus('images/1.webp', 'Куратор вашего отдыха', 'Куратор поможет быстро влиться в насыщенную программу отдыха с первого дня. Не даст пропустить ни одно мероприятие, познакомит вас с веселыми компаньонами.')
-                        div.swiper-slide: +bonus('images/1.webp', 'Дополнительные возможности', 'Только для гостей 60+ предусмотрены специальные предложения и скидки на дополнительные услуги вне программы: диагностика, процедуры и комплексы процедур.')
+                        div.swiper-slide: +bonus('images/22.webp', 'Куратор вашего отдыха', 'Куратор поможет быстро влиться в насыщенную программу отдыха с первого дня. Не даст пропустить ни одно мероприятие, познакомит вас с веселыми компаньонами.')
+                        div.swiper-slide: +bonus('images/23.webp', 'Дополнительные возможности', 'Только для гостей 60+ предусмотрены специальные предложения и скидки на дополнительные услуги вне программы: диагностика, процедуры и комплексы процедур.')
                 div.percents: span Скидки #[br]до #[b 20%]
 
-    section.benefit.blue
-        div.container
-            h2 Получите выгодную стоимость путевки от 26 160 руб 
-            button.white
-                span Забронировать со скидкой
-                include ../images/button_arrow.svg
+    //- section.benefit.blue
+    //-     div.container
+    //-         h2 Получите выгодную стоимость путевки от 26 160 руб 
+    //-         button.white
+    //-             span Забронировать со скидкой
+    //-             include ../images/button_arrow.svg
 
     section.therapy
         div.container
@@ -100,7 +100,7 @@ block content
 
     section.additions
         div.container
-            h2 Забронируйте сейчас свой здоровый отдых #[br]на период 3 ноября — 26 декабря и получите:
+            h2 Забронируйте сейчас свой здоровый отдых #[br]на период #[span.blue 3 ноября — 26 декабря] и получите:
             div.swiper
                 div.swiper-wrapper
                     div.swiper-slide: +advantage('images/price.svg', 'Программы развлечений и оздоровления по цене одной путевки')

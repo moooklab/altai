@@ -96,6 +96,13 @@ section.reviews div.title img {
   background-color: white;
   border-radius: 10px;
 }
+@media (max-width: 960px) {
+  section.reviews div.title img {
+    padding: unset;
+    background-color: transparent;
+    mix-blend-mode: multiply;
+  }
+}
 section.reviews div.title a.button {
   min-width: 228px;
   background: transparent;
@@ -202,16 +209,26 @@ section.reserve div.container {
   }
 }
 section.reserve div.text {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 section.reserve div.text h2 {
   margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+  section.reserve div.text h2 {
+    margin-bottom: unset;
+  }
 }
 section.reserve div.text p {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
   color: #63666a;
+}
+@media (max-width: 960px) {
+  section.reserve div.text p {
+    display: none;
+  }
 }
 section.reserve form {
   display: grid;
@@ -244,6 +261,12 @@ section.reserve div.note {
   text-align: center;
   color: #727272;
 }
+section.reserve div.note a {
+  text-decoration: underline;
+}
+section.reserve div.note a:hover {
+  text-decoration: none;
+}
 
 section.conditions {
   margin-bottom: 70px;
@@ -273,6 +296,7 @@ section.conditions div.list {
 section.conditions ul li {
   list-style-type: disc;
   margin-left: 1.75em;
+  color: #008ed3;
 }
 
 section.what {
@@ -308,23 +332,51 @@ section.what div.container {
 }
 section.what div.text {
   display: grid;
-  grid-gap: 24px;
   max-width: 584px;
+}
+section.what div.text h2 {
+  margin-bottom: 28px;
+}
+@media (max-width: 960px) {
+  section.what div.text h2 {
+    margin-bottom: 13px;
+  }
 }
 section.what div.text strong {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  margin-top: 36px;
+}
+@media (max-width: 960px) {
+  section.what div.text strong {
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
 }
 section.what div.text ul {
   display: grid;
   grid-gap: 16px;
   color: #008ed3;
+  margin-top: 32px;
+}
+@media (max-width: 960px) {
+  section.what div.text ul {
+    margin-top: 28px;
+  }
 }
 section.what div.text ul li {
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   grid-template-columns: -webkit-max-content auto;
   grid-template-columns: max-content auto;
   grid-gap: 8px;
+}
+@media (max-width: 960px) {
+  section.what div.text ul li {
+    grid-gap: 18px;
+  }
 }
 section.what div.text ul li img {
   width: 30px;
@@ -334,7 +386,12 @@ section.what div.text ul li img {
   -o-object-position: center center;
      object-position: center center;
   position: relative;
-  margin-top: -6px;
+}
+@media (max-width: 960px) {
+  section.what div.text ul li img {
+    width: 40px;
+    height: 40px;
+  }
 }
 section.what div.action {
   padding: 46px 50px 42px;
@@ -397,6 +454,22 @@ section.benefit {
     margin-bottom: 60px;
   }
 }
+section.benefit h2 br {
+  display: none;
+}
+@media (max-width: 960px) {
+  section.benefit h2 br {
+    display: block;
+  }
+}
+section.benefit h2 span.blue {
+  display: block;
+}
+@media (max-width: 960px) {
+  section.benefit h2 span.blue {
+    color: #00a1ff;
+  }
+}
 section.benefit div.container {
   display: grid;
   -ms-flex-line-pack: center;
@@ -448,7 +521,7 @@ section.bonuses div.list {
 @media (max-width: 960px) {
   section.bonuses div.list {
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
   }
 }
 section.bonuses div.swiper {
@@ -588,6 +661,12 @@ section.therapy div.list {
     grid-template-columns: 1fr;
   }
 }
+section.therapy a.therapy {
+  min-height: 340px;
+}
+section.therapy a.therapy div.text {
+  grid-gap: 22px;
+}
 section.therapy div.benefit {
   margin-top: 44px;
   display: grid;
@@ -621,6 +700,11 @@ section.additions {
   section.additions {
     margin-top: 60px;
     margin-bottom: 60px;
+  }
+}
+@media (max-width: 960px) {
+  section.additions h2 span.blue {
+    color: #00a1ff;
   }
 }
 section.additions div.container {
