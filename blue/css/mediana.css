@@ -633,7 +633,7 @@ section.healing div.list {
       -ms-flex-align: start;
           align-items: start;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 12px;
+  grid-gap: 8px;
 }
 @media (max-width: 960px) {
   section.healing div.list {
