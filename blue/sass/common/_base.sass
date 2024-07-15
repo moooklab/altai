@@ -21,12 +21,12 @@ html, body
 
 section, header, footer
     position: relative
-    // width: 100%
-//     display: grid
-//     grid-template-columns: [full-start] var(--full) [breakout-start] var(--breakout) [content-start] var(--content) [content-end] var(--breakout) [breakout-end] var(--full) [full-end]
-//     & > *
-//         grid-column: content
-//     .full
-//         grid-column: full
-//     .breakout
-//         grid-column: breakout
+    width: 100%
+    display: grid
+    grid-template-columns: [full-start] var(--full) [breakout-start] var(--breakout) [content-start] var(--content) [content-end] var(--breakout) [breakout-end] var(--full) [full-end]
+    & > *
+        grid-column: content
+    .full
+        grid-column: full
+    .breakout
+        grid-column: breakout
