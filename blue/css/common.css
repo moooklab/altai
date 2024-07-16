@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-* {
+main * {
   margin: unset;
   padding: unset;
   outline: unset;
@@ -15,91 +15,86 @@
      -moz-appearance: none;
           appearance: none;
 }
-
-html, body {
+main html, main body {
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
-
-input,
-textarea,
-select,
-button {
+main input,
+main textarea,
+main select,
+main button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   color: inherit;
   background-color: transparent;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder, button::-webkit-input-placeholder {
+main input::-webkit-input-placeholder, main textarea::-webkit-input-placeholder, main select::-webkit-input-placeholder, main button::-webkit-input-placeholder {
   color: inherit;
 }
-input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, button::-moz-placeholder {
+main input::-moz-placeholder, main textarea::-moz-placeholder, main select::-moz-placeholder, main button::-moz-placeholder {
   color: inherit;
 }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder, button:-ms-input-placeholder {
+main input:-ms-input-placeholder, main textarea:-ms-input-placeholder, main select:-ms-input-placeholder, main button:-ms-input-placeholder {
   color: inherit;
 }
-input::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder, button::-ms-input-placeholder {
+main input::-ms-input-placeholder, main textarea::-ms-input-placeholder, main select::-ms-input-placeholder, main button::-ms-input-placeholder {
   color: inherit;
 }
-input::placeholder,
-textarea::placeholder,
-select::placeholder,
-button::placeholder {
+main input::placeholder,
+main textarea::placeholder,
+main select::placeholder,
+main button::placeholder {
   color: inherit;
 }
-input option,
-textarea option,
-select option,
-button option {
+main input option,
+main textarea option,
+main select option,
+main button option {
   background-color: inherit;
 }
-
-input, textarea, label {
+main input, main textarea, main label {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
   color: inherit;
   resize: none;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, label::-webkit-input-placeholder {
+main input::-webkit-input-placeholder, main textarea::-webkit-input-placeholder, main label::-webkit-input-placeholder {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
   color: inherit;
 }
-input::-moz-placeholder, textarea::-moz-placeholder, label::-moz-placeholder {
+main input::-moz-placeholder, main textarea::-moz-placeholder, main label::-moz-placeholder {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
   color: inherit;
 }
-input:-ms-input-placeholder, textarea:-ms-input-placeholder, label:-ms-input-placeholder {
+main input:-ms-input-placeholder, main textarea:-ms-input-placeholder, main label:-ms-input-placeholder {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
   color: inherit;
 }
-input::-ms-input-placeholder, textarea::-ms-input-placeholder, label::-ms-input-placeholder {
+main input::-ms-input-placeholder, main textarea::-ms-input-placeholder, main label::-ms-input-placeholder {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
   color: inherit;
 }
-input::placeholder, textarea::placeholder, label::placeholder {
+main input::placeholder, main textarea::placeholder, main label::placeholder {
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
   color: inherit;
 }
-
-a {
+main a {
   cursor: pointer;
   color: inherit;
 }
-
-img {
+main img {
   vertical-align: middle;
   font-style: italic;
 }

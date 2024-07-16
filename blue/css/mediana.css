@@ -204,7 +204,7 @@ section.reserve {
     margin-bottom: 60px;
   }
 }
-section.reserve div.container {
+section.reserve div.wrap {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -218,7 +218,7 @@ section.reserve div.container {
   padding: 70px 45px;
 }
 @media (max-width: 960px) {
-  section.reserve div.container {
+  section.reserve div.wrap {
     height: auto;
     padding: 36px 16px;
   }
@@ -325,7 +325,7 @@ section.age {
     margin-bottom: 60px;
   }
 }
-section.age div.container {
+section.age div.wrap {
   display: grid;
   grid-gap: 20px;
   padding: 26px 38px;
@@ -335,20 +335,20 @@ section.age div.container {
   background: #fff;
 }
 @media (max-width: 960px) {
-  section.age div.container {
+  section.age div.wrap {
     padding: 30px 16px;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 32px;
   }
-  section.age div.container > h2 {
+  section.age div.wrap > h2 {
     grid-column: 1/3;
   }
 }
 @media (max-width: 640px) {
-  section.age div.container {
+  section.age div.wrap {
     grid-template-columns: 1fr;
   }
-  section.age div.container > h2 {
+  section.age div.wrap > h2 {
     grid-column: 1/2;
   }
 }
@@ -562,7 +562,7 @@ section.callback {
     margin-bottom: 60px;
   }
 }
-section.callback div.container {
+section.callback div.wrap {
   display: grid;
   justify-items: center;
   background: #fff;
@@ -573,7 +573,7 @@ section.callback div.container {
   padding-bottom: 18px;
 }
 @media (max-width: 960px) {
-  section.callback div.container {
+  section.callback div.wrap {
     padding: 46px 16px;
   }
 }
