@@ -480,21 +480,29 @@ section.programs div.container {
     grid-gap: 24px;
   }
 }
-section.programs div.text {
+section.programs div.container > div.text {
   display: grid;
   grid-gap: 10px;
 }
-section.programs div.text br {
+section.programs div.container > div.text br {
   display: none;
 }
 @media (max-width: 960px) {
-  section.programs div.text br {
+  section.programs div.container > div.text br {
     display: block;
   }
 }
 @media (max-width: 960px) {
-  section.programs div.text span {
+  section.programs div.container > div.text span {
     display: none;
+  }
+}
+section.programs a.program div.text {
+  grid-gap: 12px;
+}
+@media (max-width: 960px) {
+  section.programs a.program div.text {
+    grid-gap: 0;
   }
 }
 section.programs div.swiper {

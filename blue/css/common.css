@@ -672,6 +672,33 @@ main div.toolbar_note:hover div.toolbar_text {
   }
 }
 
+div.container:has(div.breadcrumbs) {
+  width: 100%;
+  position: relative;
+}
+
+div.breadcrumbs {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  z-index: 9999;
+  color: #fff;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  div.breadcrumbs {
+    left: 10px;
+    font-size: 12px;
+  }
+}
+div.breadcrumbs a {
+  color: #fff;
+  text-decoration: underline;
+}
+div.breadcrumbs a:hover {
+  text-decoration: none;
+}
+
 html:has(dialog[open]) {
   overflow-y: hidden;
   margin-right: var(--scrollbar-width);

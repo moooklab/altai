@@ -391,7 +391,26 @@ main
                     opacity: 1 !important
                     pointer-events: auto
 
+div.container:has(div.breadcrumbs)
+    width: 100%
+    position: relative
 
+div.breadcrumbs
+    position: absolute
+    top: 100px
+    left: 20px
+    z-index: 9999
+    color: $color-06
+    font-size: 14px
+    +screen(767px)
+        left: 10px
+        font-size: 12px
+
+    a
+        color: $color-06
+        text-decoration: underline
+        &:hover
+            text-decoration: none
 
 
 

@@ -3,7 +3,6 @@
 @import common/_mixins
 
 //Секции
-
 @import sections/_main
 @import sections/_reviews
 @import sections/_reserve
@@ -121,7 +120,7 @@ section.programs
         grid-gap: 44px
         +screen(m)
             grid-gap: 24px
-    div.text
+    div.container > div.text
         display: grid
         grid-gap: 10px
         br
@@ -131,6 +130,11 @@ section.programs
         span
             +screen(m)
                 display: none
+    a.program
+        div.text
+            grid-gap: 12px
+            +screen(m)
+                grid-gap: 0
     div.swiper
         width: 100%
         min-width: 0
@@ -348,7 +352,4 @@ section.additions
         width: 100%
         min-width: 0
         overflow: visible
-
-
-
 
