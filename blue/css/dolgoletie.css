@@ -26,7 +26,7 @@ section.main img {
 }
 section.main div.text {
   display: grid;
-  grid-gap: 4px;
+  grid-gap: 26px;
   position: relative;
   text-align: right;
   color: #fff;
@@ -36,6 +36,7 @@ section.main div.text {
 }
 @media (max-width: 960px) {
   section.main div.text {
+    grid-gap: 12px;
     padding-bottom: 40px;
   }
 }
