@@ -78,6 +78,8 @@ section.reviews
         grid-template-columns: 1fr max-content
         z-index: 1
         pointer-events: none
+        +screen(m)
+            display: none
         & > *:first-child svg
             transform: rotate(180deg)
         & > *

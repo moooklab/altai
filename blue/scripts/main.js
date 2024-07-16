@@ -1,147 +1,151 @@
-new Swiper('section.reviews div.swiper', {
-    slidesPerView: 1,
-    spaceBetween: '10px',
-    pagination: {
-        el: document.querySelector('section.reviews div.swiper-pagination')
-    },
-    navigation: {
-        prevEl: document.querySelector('section.reviews div.swiper-navigation > *:first-child'),
-        nextEl: document.querySelector('section.reviews div.swiper-navigation > *:last-child')
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: '20px',
-        }
-    }
-})
-
-new Swiper('section.service div.swiper', {
-    slidesPerView: 1,
-    spaceBetween: '20px',
-    pagination: {
-        el: document.querySelector('section.service div.swiper-pagination')
-    },
-    navigation: {
-        prevEl: document.querySelector('section.service div.swiper-navigation > *:first-child'),
-        nextEl: document.querySelector('section.service div.swiper-navigation > *:last-child')
-    }
-})
-
-new Swiper('section.programs div.swiper.line', {
-    slidesPerView: 1.1,
-    spaceBetween: '10px',
-    navigation: {
-        prevEl: document.querySelector('section.programs div.swiper-navigation > *:first-child'),
-        nextEl: document.querySelector('section.programs div.swiper-navigation > *:last-child')
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2.2,
-            spaceBetween: '20px',
+setTimeout(function(){
+    new Swiper('section.reviews div.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // autoHeight: true,
+        pagination: {
+            el: document.querySelector('section.reviews div.swiper-pagination')
         },
-        960: {
-            slidesPerView: 3,
-            spaceBetween: '20px',
-        }
-    }
-})
-
-new Swiper('section.programs div.swiper.grid', {
-    slidesPerView: 1.1,
-    spaceBetween: '10px',
-    grid: {
-        rows: 1,
-        fill: 'row'
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: '20px',
-            grid: {
-                rows: 3,
-                fill: 'row'
-            }
+        navigation: {
+            prevEl: document.querySelector('section.reviews div.swiper-navigation > *:first-child'),
+            nextEl: document.querySelector('section.reviews div.swiper-navigation > *:last-child')
         },
-        960: {
-            slidesPerView: 3,
-            spaceBetween: '40px',
-            grid: {
-                rows: 2,
-                fill: 'row'
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                // autoHeight: false,
             }
         }
-    }
-})
-
-new Swiper('section.therapy div.swiper', {
-    slidesPerView: 1.1,
-    spaceBetween: '10px',
-    navigation: {
-        prevEl: document.querySelector('section.therapy div.swiper-navigation > *:first-child'),
-        nextEl: document.querySelector('section.therapy div.swiper-navigation > *:last-child')
-    },
-    breakpoints: {
-        640: {
-            slidesPerView: 2.2,
-            spaceBetween: '20px',
+    })
+    
+    new Swiper('section.service div.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: document.querySelector('section.service div.swiper-pagination')
         },
-        960: {
-            slidesPerView: 3,
-            spaceBetween: '20px',
+        navigation: {
+            prevEl: document.querySelector('section.service div.swiper-navigation > *:first-child'),
+            nextEl: document.querySelector('section.service div.swiper-navigation > *:last-child')
         }
-    }
-})
-
-new Swiper('section.advantages div.swiper', {
-    slidesPerView: 1.1,
-    spaceBetween: '10px',
-    breakpoints: {
-        640: {
-            slidesPerView: 2.2,
-            spaceBetween: '20px',
+    })
+    
+    new Swiper('section.programs div.swiper.line', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        navigation: {
+            prevEl: document.querySelector('section.programs div.swiper-navigation > *:first-child'),
+            nextEl: document.querySelector('section.programs div.swiper-navigation > *:last-child')
         },
-        960: {
-            slidesPerView: 3,
-            spaceBetween: '20px',
+        breakpoints: {
+            640: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
         }
-    }
-})
-
-new Swiper('section.additions div.swiper', {
-    slidesPerView: 1.5,
-    spaceBetween: '10px',
-    breakpoints: {
-        480: {
-            slidesPerView: 2,
-            spaceBetween: '10px',
+    })
+    
+    new Swiper('section.programs div.swiper.grid', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        grid: {
+            rows: 1,
+            fill: 'row'
         },
-        640: {
-            slidesPerView: 3,
-            spaceBetween: '16px',
-        },
-        960: {
-            slidesPerView: 4,
-            spaceBetween: '16px',
-        },
-        1280: {
-            slidesPerView: 5,
-            spaceBetween: '16px',
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                grid: {
+                    rows: 3,
+                    fill: 'row'
+                }
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                }
+            }
         }
-    }
-})
-
-new Swiper('section.bonuses div.swiper', {
-    slidesPerView: 1.1,
-    spaceBetween: '10px',
-    breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: '10px',
+    })
+    
+    new Swiper('section.therapy div.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        navigation: {
+            prevEl: document.querySelector('section.therapy div.swiper-navigation > *:first-child'),
+            nextEl: document.querySelector('section.therapy div.swiper-navigation > *:last-child')
         },
-        960: {
-            slidesPerView: 2,
-            spaceBetween: '40px',
-        },
-    }
-})
+        breakpoints: {
+            640: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        }
+    })
+    
+    new Swiper('section.advantages div.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        breakpoints: {
+            640: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        }
+    })
+    
+    new Swiper('section.additions div.swiper', {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+        breakpoints: {
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+            960: {
+                slidesPerView: 4,
+                spaceBetween: 16,
+            },
+            1280: {
+                slidesPerView: 5,
+                spaceBetween: 16,
+            }
+        }
+    })
+    
+    new Swiper('section.bonuses div.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            960: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+        }
+    })
+}, 100)

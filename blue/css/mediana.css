@@ -169,6 +169,11 @@ section.reviews div.swiper-navigation {
   z-index: 1;
   pointer-events: none;
 }
+@media (max-width: 960px) {
+  section.reviews div.swiper-navigation {
+    display: none;
+  }
+}
 section.reviews div.swiper-navigation > *:first-child svg {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -290,6 +295,7 @@ section.conditions {
 section.conditions div.container {
   display: grid;
   grid-gap: 16px;
+  font-size: 16px;
 }
 section.conditions div.list {
   display: grid;
@@ -389,7 +395,6 @@ section.age div.text h3 {
   margin-top: 38px;
   margin-bottom: 32px;
   text-transform: unset;
-  font-family: "Cera Pro", sans-serif;
   font-weight: 400;
   font-size: 22px;
   color: #212121;
@@ -713,10 +718,18 @@ section.service div.advantages {
     padding: 20px 16px;
   }
 }
+section.service div.advantages h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 960px) {
+  section.service div.advantages h3 {
+    font-size: 16px;
+  }
+}
 section.service div.advantages h3:last-child {
   margin-top: 24px;
   text-transform: unset;
-  font-family: "Cera Pro", sans-serif;
   font-weight: 400;
   font-size: 22px;
   color: #212121;
@@ -725,7 +738,7 @@ section.service div.advantages h3:last-child {
 }
 @media (max-width: 960px) {
   section.service div.advantages h3:last-child {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 section.service div.advantages h3:last-child div.note {
@@ -752,6 +765,7 @@ section.service div.slider {
 section.service div.slider div.swiper {
   width: 100%;
   min-width: 0px;
+  border-radius: 16px;
 }
 section.service div.slider div.swiper-slide {
   width: 100%;
@@ -764,7 +778,6 @@ section.service div.slider div.swiper-slide img {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
-  border-radius: 16px;
 }
 section.service div.slider div.swiper-pagination {
   position: absolute;

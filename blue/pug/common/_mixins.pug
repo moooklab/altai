@@ -70,7 +70,7 @@ mixin therapy(image, title, text)
     a(href="###").therapy
         img(src=image, alt="")
         div.text
-            h3= title
+            h3 !{title}
             if text
                 span= text
 

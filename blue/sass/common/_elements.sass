@@ -1,393 +1,395 @@
-h1, h2, h3, h4
-    font-optical-sizing: auto
-    font-style: normal
-    font-weight: 500
-    text-transform: uppercase
-    // line-height: 1.2em
+main
+    h1, h2, h3, h4
+        font-optical-sizing: auto
+        font-style: normal
+        font-weight: 500
+        text-transform: uppercase
+        margin: unset
+        // line-height: 1.2em
 
-h1
-    font-size: 46px
-    +screen(m)
-        font-size: 24px
-
-h2
-    font-size: 28px
-    +screen(m)
-        font-size: 20px
-
-h3
-    font-size: 20px
-    +screen(m)
-        font-size: 16px
-
-a
-    cursor: pointer
-    &:hover
-        color: $color-07
-        text-decoration: none
-
-li
-    &::marker
-        color: $color-07
-
-input
-    border: 1px solid $color-01
-    border-radius: 999px
-    padding: 16px 20px
-    height: 48px
-    &::placeholder
-        font-weight: 400
-        font-size: 14px
-        color: $color-05
-
-strong, b
-    font-weight: 700
-
-button, a.button
-    cursor: pointer
-    display: grid
-    grid-auto-flow: column
-    grid-auto-columns: auto
-    justify-content: center
-    align-items: center
-    grid-gap: 16px
-    padding: 12px 16px
-    font-weight: 400
-    font-size: 14px
-    border-radius: 999px
-    transition: all .2s
-    height: max-content
-    svg
-        width: 22px
-
-    &.white
-        background: $color-06
-        color: $color-04
-        &:hover
-            background: $color-08
-        
-    &.blue
-        background: $color-07
-        color: $new-05
-        &:hover
-            background: $color-01
-        svg path
-            fill: white
-
-a.program
-    display: block
-    border-radius: 20px
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
-    background: $color-06
-    overflow: clip
-    height: 100%
-    text-decoration: unset
-    img
-        width: 100%
-        height: 210px
-        object-fit: cover
-        object-position: center center
-    div.text
-        display: grid
-        grid-gap: 5px
-        padding: 20px 26px 34px
-    &:hover
-        color: inherit
-        h3
-            color: $color-01
-
-a.program_full
-    display: block
-    border-radius: 20px
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
-    background: $new-05
-    overflow: clip
-    text-decoration: unset
-    div.image
-        position: relative
-        height: 210px
-        img
-            width: 100%
-            height: 100%
-            object-fit: cover
-            object-position: center center
-        span.date
-            display: block
-            width: max-content
-            position: absolute
-            top: 20px
-            right: 20px
-            background: $color-06
-            border-radius: 70px
-            padding: 4px 16px
-            font-weight: 400
-            font-size: 14px
-            color: $color-04
-            +screen(m)
-                top: 10px
-                right: 10px
-    div.description
-        display: grid
-        grid-gap: 0px
-        padding: 20px 26px
-        transition: all .3s
-        div.wrap
-            display: grid
-            grid-template-rows: 0fr
-            transition: all .3s
-            div.overflow
-                overflow: hidden
-        ul
-            display: grid
-            grid-gap: 12px
-            font-weight: 400
-            font-size: 14px
-            li
-                display: grid
-                grid-template-columns: max-content auto
-                grid-gap: 8px
-                color: inherit !important
-        div.price
-            display: grid
-            grid-auto-flow: column
-            grid-auto-columns: max-content
-            align-items: center
-            grid-gap: 12px
-            margin-top: 32px
-            span.price
-                display: block
-                font-weight: 500
-                font-size: 18px
-                text-transform: uppercase
-                color: $color-04
-    div.additional
-        padding: 0px 26px 14px
-        display: grid
-        align-items: center
-        grid-template-columns: max-content 1fr
-        grid-gap: 12px
-        button
-            padding-left: 0px
-            padding-right: 0px
-            background-color: transparent
-            color: $color-07
-            transition: all .3s
-        div.level
-            display: grid
-            justify-self: end
-            grid-template-columns: auto max-content
-            align-items: center
-            grid-gap: 10px
-            font-weight: 400
-            font-size: 14px
-            color: $color-04
-            span
-                opacity: 0
-                transition: all .3s
-            div
-                display: grid
-                align-items: end
-                grid-gap: 4px
-                grid-auto-flow: column
-                width: max-content
-                div:nth-child(1)
-                    border: 1px solid $color-01
-                    background: $color-01
-                    width: 4px
-                    height: 13px
-                div:nth-child(2)
-                    border: 1px solid $color-01
-                    background: $color-01
-                    width: 4px
-                    height: 18px
-                div:nth-child(3)
-                    border: 1px solid $color-01
-                    background: $color-01
-                    width: 4px
-                    height: 23px
-                &.low
-                    div:nth-child(2), div:nth-child(3)
-                        background: transparent
-                &.middle
-                    div:nth-child(3)
-                        background: transparent
-
-    &:hover
-        color: inherit
-        div.description
-            grid-gap: 16px
-            div.wrap
-                grid-template-rows: 1fr
-                div.overflow
-                    animation-name: overflow_disable
-                    animation-fill-mode: forwards
-                    animation-duration: .1s
-                    animation-delay: .2s
-        div.additional
-            button
-                padding-left: 32px
-                padding-right: 32px
-                background: $color-07
-                color: $new-05
-                &:hover
-                    background: $color-01
-            div.level
-                span
-                    opacity: 1
-
-    +screen(m)
-        div.description
-            grid-gap: 16px
-            div.wrap
-                grid-template-rows: 1fr
-        div.additional
-            button
-                padding-left: 32px
-                padding-right: 32px
-                background: $color-07
-                color: $new-05
-                &:hover
-                    background: $color-01
-            div.level
-                span
-                    opacity: 1
-
-a.complex_full
-    @extend .program_full
-    div.description
-        div.price
-            margin-top: 4px
-    @keyframes overflow_disable
-        0%
-            overflow: hidden
-        100%
-            overflow: visible
-
-a.therapy
-    display: block
-    border-radius: 20px
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
-    background: $color-06
-    overflow: clip
-    text-decoration: unset
-    img
-        width: 100%
-        height: 210px
-        object-fit: cover
-        object-position: center center
-    div.text
-        display: grid
-        grid-gap: 15px
-        padding: 20px 26px
-        
-div.bonus
-    position: relative
-    display: block
-    border-radius: 20px
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
-    background: $color-06
-    overflow: clip
-    height: 100%
-    img
-        width: 100%
-        height: 210px
-        object-fit: cover
-        object-position: center center
-    div.text
-        display: grid
-        grid-gap: 8px
-        padding: 20px 26px 26px
-        h3
+    h1
+        font-size: 46px
+        +screen(m)
             font-size: 24px
-            font-weight: 700
 
-div.review
-    display: grid
-    grid-template-areas: 'Stars Stars' 'Text Text' 'Author Date'
-    grid-template-rows: max-content 1fr max-content
-    border-radius: 20px
-    background: $color-06
-    padding: 24px 32px
-    height: 100%
-    // box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
-    +screen(m)
-        padding: 20px 18px
+    h2
+        font-size: 28px
+        +screen(m)
+            font-size: 20px
 
-    div.stars
-        grid-area: Stars
-    div.text
-        grid-area: Text
-        margin-top: 24px
-        margin-bottom: 32px
-    div.author
-        grid-area: Author
-        font-weight: 700
-        font-size: 18px
-        text-transform: capitalize
-        color: $color-04
+    h3
+        font-size: 20px
         +screen(m)
             font-size: 16px
-    div.date
-        grid-area: Date
-        justify-self: end
-        font-weight: 400
-        font-size: 16px
-        +screen(m)
+
+    a
+        cursor: pointer
+        &:hover
+            color: $color-07
+            text-decoration: none
+
+    li
+        &::marker
+            color: $color-07
+
+    input
+        border: 1px solid $color-01
+        border-radius: 999px
+        padding: 16px 20px
+        height: 48px
+        &::placeholder
+            font-weight: 400
             font-size: 14px
-        a
-            color: $color-01
-            text-decoration: underline
-            &:hover
-                color: $color-07
-                text-decoration: none
+            color: $color-05
 
-div.advantage
-    display: grid
-    align-content: start
-    grid-gap: 20px
-    div.icon
+    strong, b
+        font-weight: 700
+
+    button, a.button
+        cursor: pointer
         display: grid
+        grid-auto-flow: column
+        grid-auto-columns: auto
+        justify-content: center
         align-items: center
-        justify-items: center
-        border-radius: 10px
-        width: 100%
-        height: 160px
-        background: $color-06
-
-div.toolbar_note
-    cursor: pointer
-    display: inline-grid
-    position: relative
-    div.toolbar_text
-        position: absolute
-        left: 50%
-        bottom: calc(100% + 12px)
-        color: #000
-        font-size: 14px
-        line-height: 1.2
+        grid-gap: 16px
+        padding: 12px 16px
         font-weight: 400
-        width: 200px
-        z-index: 9
-        background-color: #fff
-        box-shadow: 0px 6px 12px 0 rgba(0,0,0,0.2)
-        border-radius: 4px
-        padding: 12px
-        transform: translateX(-50%)
-        opacity: 0
-        pointer-events: none
+        font-size: 14px
+        border-radius: 999px
         transition: all .2s
-    &:hover
+        height: max-content
+        svg
+            width: 22px
+
+        &.white
+            background: $color-06
+            color: $color-04
+            &:hover
+                background: $color-08
+            
+        &.blue
+            background: $color-07
+            color: $new-05
+            &:hover
+                background: $color-01
+            svg path
+                fill: white
+
+    a.program
+        display: block
+        border-radius: 20px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $color-06
+        overflow: clip
+        height: 100%
+        text-decoration: unset
+        img
+            width: 100%
+            height: 210px
+            object-fit: cover
+            object-position: center center
+        div.text
+            display: grid
+            grid-gap: 5px
+            padding: 20px 26px 34px
+        &:hover
+            color: inherit
+            h3
+                color: $color-01
+
+    a.program_full
+        display: block
+        border-radius: 20px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $new-05
+        overflow: clip
+        text-decoration: unset
+        div.image
+            position: relative
+            height: 210px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+            span.date
+                display: block
+                width: max-content
+                position: absolute
+                top: 20px
+                right: 20px
+                background: $color-06
+                border-radius: 70px
+                padding: 4px 16px
+                font-weight: 400
+                font-size: 14px
+                color: $color-04
+                +screen(m)
+                    top: 10px
+                    right: 10px
+        div.description
+            display: grid
+            grid-gap: 0px
+            padding: 20px 26px
+            transition: all .3s
+            div.wrap
+                display: grid
+                grid-template-rows: 0fr
+                transition: all .3s
+                div.overflow
+                    overflow: hidden
+            ul
+                display: grid
+                grid-gap: 12px
+                font-weight: 400
+                font-size: 14px
+                li
+                    display: grid
+                    grid-template-columns: max-content auto
+                    grid-gap: 8px
+                    color: inherit !important
+            div.price
+                display: grid
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                align-items: center
+                grid-gap: 12px
+                margin-top: 32px
+                span.price
+                    display: block
+                    font-weight: 500
+                    font-size: 18px
+                    text-transform: uppercase
+                    color: $color-04
+        div.additional
+            padding: 0px 26px 14px
+            display: grid
+            align-items: center
+            grid-template-columns: max-content 1fr
+            grid-gap: 12px
+            button
+                padding-left: 0px
+                padding-right: 0px
+                background-color: transparent
+                color: $color-07
+                transition: all .3s
+            div.level
+                display: grid
+                justify-self: end
+                grid-template-columns: auto max-content
+                align-items: center
+                grid-gap: 10px
+                font-weight: 400
+                font-size: 14px
+                color: $color-04
+                span
+                    opacity: 0
+                    transition: all .3s
+                div
+                    display: grid
+                    align-items: end
+                    grid-gap: 4px
+                    grid-auto-flow: column
+                    width: max-content
+                    div:nth-child(1)
+                        border: 1px solid $color-01
+                        background: $color-01
+                        width: 4px
+                        height: 13px
+                    div:nth-child(2)
+                        border: 1px solid $color-01
+                        background: $color-01
+                        width: 4px
+                        height: 18px
+                    div:nth-child(3)
+                        border: 1px solid $color-01
+                        background: $color-01
+                        width: 4px
+                        height: 23px
+                    &.low
+                        div:nth-child(2), div:nth-child(3)
+                            background: transparent
+                    &.middle
+                        div:nth-child(3)
+                            background: transparent
+
+        &:hover
+            color: inherit
+            div.description
+                grid-gap: 16px
+                div.wrap
+                    grid-template-rows: 1fr
+                    div.overflow
+                        animation-name: overflow_disable
+                        animation-fill-mode: forwards
+                        animation-duration: .1s
+                        animation-delay: .2s
+            div.additional
+                button
+                    padding-left: 32px
+                    padding-right: 32px
+                    background: $color-07
+                    color: $new-05
+                    &:hover
+                        background: $color-01
+                div.level
+                    span
+                        opacity: 1
+
+        +screen(m)
+            div.description
+                grid-gap: 16px
+                div.wrap
+                    grid-template-rows: 1fr
+            div.additional
+                button
+                    padding-left: 32px
+                    padding-right: 32px
+                    background: $color-07
+                    color: $new-05
+                    &:hover
+                        background: $color-01
+                div.level
+                    span
+                        opacity: 1
+
+    a.complex_full
+        @extend .program_full
+        div.description
+            div.price
+                margin-top: 4px
+        @keyframes overflow_disable
+            0%
+                overflow: hidden
+            100%
+                overflow: visible
+
+    a.therapy
+        display: block
+        border-radius: 20px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $color-06
+        overflow: clip
+        text-decoration: unset
+        img
+            width: 100%
+            height: 210px
+            object-fit: cover
+            object-position: center center
+        div.text
+            display: grid
+            grid-gap: 15px
+            padding: 20px 26px
+            
+    div.bonus
+        position: relative
+        display: block
+        border-radius: 20px
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        background: $color-06
+        overflow: clip
+        height: 100%
+        img
+            width: 100%
+            height: 210px
+            object-fit: cover
+            object-position: center center
+        div.text
+            display: grid
+            grid-gap: 8px
+            padding: 20px 26px 26px
+            h3
+                font-size: 24px
+                font-weight: 700
+
+    div.review
+        display: grid
+        grid-template-areas: 'Stars Stars' 'Text Text' 'Author Date'
+        grid-template-rows: max-content 1fr max-content
+        border-radius: 20px
+        background: $color-06
+        padding: 24px 32px
+        height: 100%
+        // box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+        +screen(m)
+            padding: 20px 18px
+
+        div.stars
+            grid-area: Stars
+        div.text
+            grid-area: Text
+            margin-top: 24px
+            margin-bottom: 32px
+        div.author
+            grid-area: Author
+            font-weight: 700
+            font-size: 17px
+            text-transform: capitalize
+            color: $color-04
+            +screen(m)
+                font-size: 14px
+        div.date
+            grid-area: Date
+            justify-self: end
+            font-weight: 400
+            font-size: 16px
+            +screen(m)
+                font-size: 14px
+            a
+                color: $color-01
+                text-decoration: underline
+                &:hover
+                    color: $color-07
+                    text-decoration: none
+
+    div.advantage
+        display: grid
+        align-content: start
+        grid-gap: 20px
+        div.icon
+            display: grid
+            align-items: center
+            justify-items: center
+            border-radius: 10px
+            width: 100%
+            height: 160px
+            background: $color-06
+
+    div.toolbar_note
+        cursor: pointer
+        display: inline-grid
+        position: relative
         div.toolbar_text
-            opacity: 1
-            pointer-events: auto
-    +screen(m)
-        div.toolbar_text
-            opacity: 0 !important
-            pointer-events: auto
-        &.show
+            position: absolute
+            left: 50%
+            bottom: calc(100% + 12px)
+            color: #000
+            font-size: 14px
+            line-height: 1.2
+            font-weight: 400
+            width: 200px
+            z-index: 9
+            background-color: #fff
+            box-shadow: 0px 6px 12px 0 rgba(0,0,0,0.2)
+            border-radius: 4px
+            padding: 12px
+            transform: translateX(-50%)
+            opacity: 0
+            pointer-events: none
+            transition: all .2s
+        &:hover
             div.toolbar_text
-                opacity: 1 !important
+                opacity: 1
                 pointer-events: auto
+        +screen(m)
+            div.toolbar_text
+                opacity: 0 !important
+                pointer-events: auto
+            &.show
+                div.toolbar_text
+                    opacity: 1 !important
+                    pointer-events: auto
 
 
 

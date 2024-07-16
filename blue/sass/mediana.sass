@@ -41,6 +41,7 @@ section.age
                 left: unset
                 right: 0
                 transform: unset
+    
     div.text
         display: grid
         align-items: start
@@ -67,7 +68,6 @@ section.age
             margin-top: 38px
             margin-bottom: 32px
             text-transform: unset
-            font-family: "Cera Pro", sans-serif
             font-weight: 400
             font-size: 22px
             color: $color-04
@@ -284,17 +284,22 @@ section.service
         +screen(m)
             padding: 20px 16px
 
+        h3
+            font-size: 18px
+            font-weight: 500
+            +screen(m)
+                font-size: 16px
+
         h3:last-child
             margin-top: 24px
             text-transform: unset
-            font-family: "Cera Pro", sans-serif
             font-weight: 400
             font-size: 22px
             color: $color-04
             border-left: 2px solid $color-07
             padding-left: 12px
             +screen(m)
-                font-size: 18px
+                font-size: 16px
             div.note
                 display: inline
                 line-height: 0
@@ -317,6 +322,7 @@ section.service
         div.swiper
             width: 100%
             min-width: 0px
+            border-radius: 16px
         div.swiper-slide
             width: 100%
             aspect-ratio: 778 / 400
@@ -325,7 +331,6 @@ section.service
                 height: 100%
                 object-fit: cover
                 object-position: center center
-                border-radius: 16px
         div.swiper-pagination
             position: absolute
             bottom: 30px

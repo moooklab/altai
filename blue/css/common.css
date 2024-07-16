@@ -139,89 +139,82 @@ section, header, footer {
   position: relative;
 }
 
-h1, h2, h3, h4 {
+main h1, main h2, main h3, main h4 {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
+  margin: unset;
 }
-
-h1 {
+main h1 {
   font-size: 46px;
 }
 @media (max-width: 960px) {
-  h1 {
+  main h1 {
     font-size: 24px;
   }
 }
-
-h2 {
+main h2 {
   font-size: 28px;
 }
 @media (max-width: 960px) {
-  h2 {
+  main h2 {
     font-size: 20px;
   }
 }
-
-h3 {
+main h3 {
   font-size: 20px;
 }
 @media (max-width: 960px) {
-  h3 {
+  main h3 {
     font-size: 16px;
   }
 }
-
-a {
+main a {
   cursor: pointer;
 }
-a:hover {
+main a:hover {
   color: #008ed3;
   text-decoration: none;
 }
-
-li::marker {
+main li::marker {
   color: #008ed3;
 }
-
-input {
+main input {
   border: 1px solid #00a1ff;
   border-radius: 999px;
   padding: 16px 20px;
   height: 48px;
 }
-input::-webkit-input-placeholder {
+main input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 14px;
   color: #63666a;
 }
-input::-moz-placeholder {
+main input::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
   color: #63666a;
 }
-input:-ms-input-placeholder {
+main input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
   color: #63666a;
 }
-input::-ms-input-placeholder {
+main input::-ms-input-placeholder {
   font-weight: 400;
   font-size: 14px;
   color: #63666a;
 }
-input::placeholder {
+main input::placeholder {
   font-weight: 400;
   font-size: 14px;
   color: #63666a;
 }
-
-strong, b {
+main strong, main b {
   font-weight: 700;
 }
-
-button, a.button {
+main button, main a.button {
   cursor: pointer;
   display: grid;
   grid-auto-flow: column;
@@ -243,28 +236,27 @@ button, a.button {
   height: -moz-max-content;
   height: max-content;
 }
-button svg, a.button svg {
+main button svg, main a.button svg {
   width: 22px;
 }
-button.white, a.button.white {
+main button.white, main a.button.white {
   background: #fff;
   color: #212121;
 }
-button.white:hover, a.button.white:hover {
+main button.white:hover, main a.button.white:hover {
   background: #e0e0e0;
 }
-button.blue, a.button.blue {
+main button.blue, main a.button.blue {
   background: #008ed3;
   color: #f4f2f2;
 }
-button.blue:hover, a.button.blue:hover {
+main button.blue:hover, main a.button.blue:hover {
   background: #00a1ff;
 }
-button.blue svg path, a.button.blue svg path {
+main button.blue svg path, main a.button.blue svg path {
   fill: white;
 }
-
-a.program {
+main a.program {
   display: block;
   border-radius: 20px;
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -274,7 +266,7 @@ a.program {
   height: 100%;
   text-decoration: unset;
 }
-a.program img {
+main a.program img {
   width: 100%;
   height: 210px;
   -o-object-fit: cover;
@@ -282,19 +274,18 @@ a.program img {
   -o-object-position: center center;
      object-position: center center;
 }
-a.program div.text {
+main a.program div.text {
   display: grid;
   grid-gap: 5px;
   padding: 20px 26px 34px;
 }
-a.program:hover {
+main a.program:hover {
   color: inherit;
 }
-a.program:hover h3 {
+main a.program:hover h3 {
   color: #00a1ff;
 }
-
-a.program_full, a.complex_full {
+main a.program_full, main a.complex_full {
   display: block;
   border-radius: 20px;
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -303,11 +294,11 @@ a.program_full, a.complex_full {
   overflow: clip;
   text-decoration: unset;
 }
-a.program_full div.image, a.complex_full div.image {
+main a.program_full div.image, main a.complex_full div.image {
   position: relative;
   height: 210px;
 }
-a.program_full div.image img, a.complex_full div.image img {
+main a.program_full div.image img, main a.complex_full div.image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -315,7 +306,7 @@ a.program_full div.image img, a.complex_full div.image img {
   -o-object-position: center center;
      object-position: center center;
 }
-a.program_full div.image span.date, a.complex_full div.image span.date {
+main a.program_full div.image span.date, main a.complex_full div.image span.date {
   display: block;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -331,41 +322,41 @@ a.program_full div.image span.date, a.complex_full div.image span.date {
   color: #212121;
 }
 @media (max-width: 960px) {
-  a.program_full div.image span.date, a.complex_full div.image span.date {
+  main a.program_full div.image span.date, main a.complex_full div.image span.date {
     top: 10px;
     right: 10px;
   }
 }
-a.program_full div.description, a.complex_full div.description {
+main a.program_full div.description, main a.complex_full div.description {
   display: grid;
   grid-gap: 0px;
   padding: 20px 26px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-a.program_full div.description div.wrap, a.complex_full div.description div.wrap {
+main a.program_full div.description div.wrap, main a.complex_full div.description div.wrap {
   display: grid;
   grid-template-rows: 0fr;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-a.program_full div.description div.wrap div.overflow, a.complex_full div.description div.wrap div.overflow {
+main a.program_full div.description div.wrap div.overflow, main a.complex_full div.description div.wrap div.overflow {
   overflow: hidden;
 }
-a.program_full div.description ul, a.complex_full div.description ul {
+main a.program_full div.description ul, main a.complex_full div.description ul {
   display: grid;
   grid-gap: 12px;
   font-weight: 400;
   font-size: 14px;
 }
-a.program_full div.description ul li, a.complex_full div.description ul li {
+main a.program_full div.description ul li, main a.complex_full div.description ul li {
   display: grid;
   grid-template-columns: -webkit-max-content auto;
   grid-template-columns: max-content auto;
   grid-gap: 8px;
   color: inherit !important;
 }
-a.program_full div.description div.price, a.complex_full div.description div.price {
+main a.program_full div.description div.price, main a.complex_full div.description div.price {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: -webkit-max-content;
@@ -376,14 +367,14 @@ a.program_full div.description div.price, a.complex_full div.description div.pri
   grid-gap: 12px;
   margin-top: 32px;
 }
-a.program_full div.description div.price span.price, a.complex_full div.description div.price span.price {
+main a.program_full div.description div.price span.price, main a.complex_full div.description div.price span.price {
   display: block;
   font-weight: 500;
   font-size: 18px;
   text-transform: uppercase;
   color: #212121;
 }
-a.program_full div.additional, a.complex_full div.additional {
+main a.program_full div.additional, main a.complex_full div.additional {
   padding: 0px 26px 14px;
   display: grid;
   -webkit-box-align: center;
@@ -393,7 +384,7 @@ a.program_full div.additional, a.complex_full div.additional {
   grid-template-columns: max-content 1fr;
   grid-gap: 12px;
 }
-a.program_full div.additional button, a.complex_full div.additional button {
+main a.program_full div.additional button, main a.complex_full div.additional button {
   padding-left: 0px;
   padding-right: 0px;
   background-color: transparent;
@@ -401,7 +392,7 @@ a.program_full div.additional button, a.complex_full div.additional button {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-a.program_full div.additional div.level, a.complex_full div.additional div.level {
+main a.program_full div.additional div.level, main a.complex_full div.additional div.level {
   display: grid;
   justify-self: end;
   grid-template-columns: auto -webkit-max-content;
@@ -414,12 +405,12 @@ a.program_full div.additional div.level, a.complex_full div.additional div.level
   font-size: 14px;
   color: #212121;
 }
-a.program_full div.additional div.level span, a.complex_full div.additional div.level span {
+main a.program_full div.additional div.level span, main a.complex_full div.additional div.level span {
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-a.program_full div.additional div.level div, a.complex_full div.additional div.level div {
+main a.program_full div.additional div.level div, main a.complex_full div.additional div.level div {
   display: grid;
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -430,40 +421,40 @@ a.program_full div.additional div.level div, a.complex_full div.additional div.l
   width: -moz-max-content;
   width: max-content;
 }
-a.program_full div.additional div.level div div:nth-child(1), a.complex_full div.additional div.level div div:nth-child(1) {
+main a.program_full div.additional div.level div div:nth-child(1), main a.complex_full div.additional div.level div div:nth-child(1) {
   border: 1px solid #00a1ff;
   background: #00a1ff;
   width: 4px;
   height: 13px;
 }
-a.program_full div.additional div.level div div:nth-child(2), a.complex_full div.additional div.level div div:nth-child(2) {
+main a.program_full div.additional div.level div div:nth-child(2), main a.complex_full div.additional div.level div div:nth-child(2) {
   border: 1px solid #00a1ff;
   background: #00a1ff;
   width: 4px;
   height: 18px;
 }
-a.program_full div.additional div.level div div:nth-child(3), a.complex_full div.additional div.level div div:nth-child(3) {
+main a.program_full div.additional div.level div div:nth-child(3), main a.complex_full div.additional div.level div div:nth-child(3) {
   border: 1px solid #00a1ff;
   background: #00a1ff;
   width: 4px;
   height: 23px;
 }
-a.program_full div.additional div.level div.low div:nth-child(2), a.complex_full div.additional div.level div.low div:nth-child(2), a.program_full div.additional div.level div.low div:nth-child(3), a.complex_full div.additional div.level div.low div:nth-child(3) {
+main a.program_full div.additional div.level div.low div:nth-child(2), main a.complex_full div.additional div.level div.low div:nth-child(2), main a.program_full div.additional div.level div.low div:nth-child(3), main a.complex_full div.additional div.level div.low div:nth-child(3) {
   background: transparent;
 }
-a.program_full div.additional div.level div.middle div:nth-child(3), a.complex_full div.additional div.level div.middle div:nth-child(3) {
+main a.program_full div.additional div.level div.middle div:nth-child(3), main a.complex_full div.additional div.level div.middle div:nth-child(3) {
   background: transparent;
 }
-a.program_full:hover, a.complex_full:hover {
+main a.program_full:hover, main a.complex_full:hover {
   color: inherit;
 }
-a.program_full:hover div.description, a.complex_full:hover div.description {
+main a.program_full:hover div.description, main a.complex_full:hover div.description {
   grid-gap: 16px;
 }
-a.program_full:hover div.description div.wrap, a.complex_full:hover div.description div.wrap {
+main a.program_full:hover div.description div.wrap, main a.complex_full:hover div.description div.wrap {
   grid-template-rows: 1fr;
 }
-a.program_full:hover div.description div.wrap div.overflow, a.complex_full:hover div.description div.wrap div.overflow {
+main a.program_full:hover div.description div.wrap div.overflow, main a.complex_full:hover div.description div.wrap div.overflow {
   -webkit-animation-name: overflow_disable;
           animation-name: overflow_disable;
   -webkit-animation-fill-mode: forwards;
@@ -473,40 +464,39 @@ a.program_full:hover div.description div.wrap div.overflow, a.complex_full:hover
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-a.program_full:hover div.additional button, a.complex_full:hover div.additional button {
+main a.program_full:hover div.additional button, main a.complex_full:hover div.additional button {
   padding-left: 32px;
   padding-right: 32px;
   background: #008ed3;
   color: #f4f2f2;
 }
-a.program_full:hover div.additional button:hover, a.complex_full:hover div.additional button:hover {
+main a.program_full:hover div.additional button:hover, main a.complex_full:hover div.additional button:hover {
   background: #00a1ff;
 }
-a.program_full:hover div.additional div.level span, a.complex_full:hover div.additional div.level span {
+main a.program_full:hover div.additional div.level span, main a.complex_full:hover div.additional div.level span {
   opacity: 1;
 }
 @media (max-width: 960px) {
-  a.program_full div.description, a.complex_full div.description {
+  main a.program_full div.description, main a.complex_full div.description {
     grid-gap: 16px;
   }
-  a.program_full div.description div.wrap, a.complex_full div.description div.wrap {
+  main a.program_full div.description div.wrap, main a.complex_full div.description div.wrap {
     grid-template-rows: 1fr;
   }
-  a.program_full div.additional button, a.complex_full div.additional button {
+  main a.program_full div.additional button, main a.complex_full div.additional button {
     padding-left: 32px;
     padding-right: 32px;
     background: #008ed3;
     color: #f4f2f2;
   }
-  a.program_full div.additional button:hover, a.complex_full div.additional button:hover {
+  main a.program_full div.additional button:hover, main a.complex_full div.additional button:hover {
     background: #00a1ff;
   }
-  a.program_full div.additional div.level span, a.complex_full div.additional div.level span {
+  main a.program_full div.additional div.level span, main a.complex_full div.additional div.level span {
     opacity: 1;
   }
 }
-
-a.complex_full div.description div.price {
+main a.complex_full div.description div.price {
   margin-top: 4px;
 }
 @-webkit-keyframes overflow_disable {
@@ -525,8 +515,7 @@ a.complex_full div.description div.price {
     overflow: visible;
   }
 }
-
-a.therapy {
+main a.therapy {
   display: block;
   border-radius: 20px;
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -535,7 +524,7 @@ a.therapy {
   overflow: clip;
   text-decoration: unset;
 }
-a.therapy img {
+main a.therapy img {
   width: 100%;
   height: 210px;
   -o-object-fit: cover;
@@ -543,13 +532,12 @@ a.therapy img {
   -o-object-position: center center;
      object-position: center center;
 }
-a.therapy div.text {
+main a.therapy div.text {
   display: grid;
   grid-gap: 15px;
   padding: 20px 26px;
 }
-
-div.bonus {
+main div.bonus {
   position: relative;
   display: block;
   border-radius: 20px;
@@ -559,7 +547,7 @@ div.bonus {
   overflow: clip;
   height: 100%;
 }
-div.bonus img {
+main div.bonus img {
   width: 100%;
   height: 210px;
   -o-object-fit: cover;
@@ -567,17 +555,16 @@ div.bonus img {
   -o-object-position: center center;
      object-position: center center;
 }
-div.bonus div.text {
+main div.bonus div.text {
   display: grid;
   grid-gap: 8px;
   padding: 20px 26px 26px;
 }
-div.bonus div.text h3 {
+main div.bonus div.text h3 {
   font-size: 24px;
   font-weight: 700;
 }
-
-div.review {
+main div.review {
   display: grid;
   grid-template-areas: "Stars Stars" "Text Text" "Author Date";
   grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
@@ -588,57 +575,56 @@ div.review {
   height: 100%;
 }
 @media (max-width: 960px) {
-  div.review {
+  main div.review {
     padding: 20px 18px;
   }
 }
-div.review div.stars {
+main div.review div.stars {
   grid-area: Stars;
 }
-div.review div.text {
+main div.review div.text {
   grid-area: Text;
   margin-top: 24px;
   margin-bottom: 32px;
 }
-div.review div.author {
+main div.review div.author {
   grid-area: Author;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
   text-transform: capitalize;
   color: #212121;
 }
 @media (max-width: 960px) {
-  div.review div.author {
-    font-size: 16px;
+  main div.review div.author {
+    font-size: 14px;
   }
 }
-div.review div.date {
+main div.review div.date {
   grid-area: Date;
   justify-self: end;
   font-weight: 400;
   font-size: 16px;
 }
 @media (max-width: 960px) {
-  div.review div.date {
+  main div.review div.date {
     font-size: 14px;
   }
 }
-div.review div.date a {
+main div.review div.date a {
   color: #00a1ff;
   text-decoration: underline;
 }
-div.review div.date a:hover {
+main div.review div.date a:hover {
   color: #008ed3;
   text-decoration: none;
 }
-
-div.advantage {
+main div.advantage {
   display: grid;
   -ms-flex-line-pack: start;
       align-content: start;
   grid-gap: 20px;
 }
-div.advantage div.icon {
+main div.advantage div.icon {
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -649,13 +635,12 @@ div.advantage div.icon {
   height: 160px;
   background: #fff;
 }
-
-div.toolbar_note {
+main div.toolbar_note {
   cursor: pointer;
   display: inline-grid;
   position: relative;
 }
-div.toolbar_note div.toolbar_text {
+main div.toolbar_note div.toolbar_text {
   position: absolute;
   left: 50%;
   bottom: calc(100% + 12px);
@@ -678,16 +663,16 @@ div.toolbar_note div.toolbar_text {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-div.toolbar_note:hover div.toolbar_text {
+main div.toolbar_note:hover div.toolbar_text {
   opacity: 1;
   pointer-events: auto;
 }
 @media (max-width: 960px) {
-  div.toolbar_note div.toolbar_text {
+  main div.toolbar_note div.toolbar_text {
     opacity: 0 !important;
     pointer-events: auto;
   }
-  div.toolbar_note.show div.toolbar_text {
+  main div.toolbar_note.show div.toolbar_text {
     opacity: 1 !important;
     pointer-events: auto;
   }

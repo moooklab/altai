@@ -32,9 +32,10 @@ section.what
 
     div.text
         display: grid
-        max-width: 584px
+        max-width: 640px
 
         h2
+            font-weight: 700
             margin-bottom: 28px
             +screen(m)
                 margin-bottom: 13px
@@ -73,9 +74,8 @@ section.what
                         height: 40px
 
     div.action
-        padding: 46px 50px 42px
+        padding: 52px 32px 42px
         display: grid
-        grid-gap: 34px
         align-self: stretch
         align-content: center
         justify-items: center
@@ -88,6 +88,22 @@ section.what
             grid-gap: 20px
             padding: 20px 16px
             height: auto
+
+        h2
+            font-weight: 700
+            font-size: 24px
+            text-transform: uppercase
+            margin-bottom: 35px
+
+        span
+            font-size: 16px
+
+        button
+            margin-top: 51px
+            border-radius: 10px
+            padding: 12px 16px
+            span
+                font-size: 14px
 
 section.programs
     margin-top: 70px
@@ -104,6 +120,13 @@ section.programs
     div.text
         display: grid
         grid-gap: 10px
+        br
+            display: none
+            +screen(m)
+                display: block
+        span
+            +screen(m)
+                display: none
     div.swiper
         width: 100%
         min-width: 0
@@ -174,7 +197,7 @@ section.bonuses
         background: $color-06
         padding: 34px 20px
         h3
-            color: $color-01
+            // color: $color-01
             margin-bottom: 24px
         span
             display: block
@@ -182,12 +205,14 @@ section.bonuses
             display: inline-block
         ul
             display: grid
-            grid-gap: 26px
+            grid-gap: 12px
             margin-top: 36px
             li
                 display: grid
+                align-items: center
                 grid-template-columns: max-content auto
                 grid-gap: 24px
+                color: inherit !important
             div.icon
                 position: relative
                 width: 30px
@@ -231,13 +256,23 @@ section.bonuses
             font-size: 16px
             width: 80px
             height: 80px
-        +screen(m)
-            display: none
+        // +screen(m)
+        //     display: none
         b
             font-weight: 500
             font-size: 28px
             +screen(l)
                 font-size: 18px
+    div.bonus
+        div.text
+            grid-gap: 15px
+            +screen(m)
+                grid-gap: 12px
+            h3
+                font-size: 20px
+                font-weight: 500
+                +screen(m)
+                    font-size: 16px
 
 section.therapy
     margin-top: 70px
@@ -264,6 +299,10 @@ section.therapy
         min-height: 340px
         div.text
             grid-gap: 22px
+            +screen(m)
+                padding: 18px 16px
+            h3
+                font-size: 20px
 
     div.benefit
         margin-top: calc(70px - 26px)
