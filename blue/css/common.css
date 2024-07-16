@@ -289,7 +289,7 @@ main a.program_full, main a.complex_full {
   border-radius: 20px;
   -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  background: #f4f2f2;
+  background: #fff;
   overflow: clip;
   text-decoration: unset;
 }
