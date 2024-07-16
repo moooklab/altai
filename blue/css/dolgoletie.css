@@ -427,8 +427,10 @@ section.what div.action {
 @media (max-width: 960px) {
   section.what div.action {
     grid-gap: 20px;
-    padding: 20px 16px;
-    height: auto;
+    padding: 40px 20px 22px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 section.what div.action h2 {
