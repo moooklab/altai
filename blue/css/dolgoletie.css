@@ -489,6 +489,12 @@ section.programs div.swiper {
   min-width: 0;
   overflow: visible;
 }
+section.programs div.swiper div.swiper-slide {
+  height: auto;
+}
+section.programs a.program {
+  height: 100%;
+}
 
 section.benefit {
   margin-top: 70px;
