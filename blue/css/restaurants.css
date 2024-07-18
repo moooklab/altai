@@ -436,6 +436,9 @@ section.season div.text {
 }
 section.season div.tabs {
   display: grid;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
   grid-gap: 14px;
@@ -546,31 +549,39 @@ section.season div.tabs div.tabs_captions div.date div.details span {
 }
 section.season div.tabs div.tab_content {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
   border: 1px solid #e2dce4;
   border-radius: 16px;
   background: #f3f3f3;
   height: 100%;
   display: none;
+  padding: 20px;
+  padding-left: 34px;
 }
 @media (max-width: 640px) {
   section.season div.tabs div.tab_content {
     width: calc(100% + 20px);
     margin-left: -10px;
     grid-template-columns: 1fr;
+    grid-gap: 16px;
     border-radius: unset;
     border: unset;
+    padding: 20px 10px;
+    padding-bottom: unset;
   }
 }
 section.season div.tabs div.tab_content.opened {
   display: grid;
 }
 section.season div.tabs div.tab_content div.details {
-  padding: 30px 27px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 640px) {
   section.season div.tabs div.tab_content div.details {
-    padding: 20px 10px;
+    grid-template-columns: 1fr;
   }
 }
 section.season div.tabs div.tab_content div.details > h3 {
@@ -605,6 +616,11 @@ section.season div.tabs div.tab_content div.details div.dates div {
   line-height: 143%;
   color: #00a1ff;
 }
+@media (max-width: 960px) {
+  section.season div.tabs div.tab_content div.details div.dates div span {
+    font-weight: 500;
+  }
+}
 section.season div.tabs div.tab_content div.details ul li {
   list-style-type: disc;
   margin-left: 1.75em;
@@ -613,69 +629,77 @@ section.season div.tabs div.tab_content div.details ul li {
 section.season div.tabs div.tab_content div.details ul li::marker {
   color: #212121;
 }
-section.season div.tabs div.tab_content div.details div.winter {
-  display: grid;
-  grid-gap: 14px;
-  margin-top: 92px;
-}
-@media (max-width: 960px) {
-  section.season div.tabs div.tab_content div.details div.winter {
-    margin-top: 20px;
-  }
-}
-section.season div.tabs div.tab_content div.details div.winter h3 {
-  color: black;
-}
-@media (max-width: 960px) {
-  section.season div.tabs div.tab_content div.details div.winter h3 {
-    font-size: 20px;
-  }
-}
-section.season div.tabs div.tab_content div.details div.spring {
-  display: grid;
-  grid-gap: 14px;
-  margin-top: 26px;
-}
-@media (max-width: 960px) {
-  section.season div.tabs div.tab_content div.details div.spring {
-    margin-top: 20px;
-  }
-}
-section.season div.tabs div.tab_content div.details div.spring h3 {
-  color: black;
-}
-@media (max-width: 960px) {
-  section.season div.tabs div.tab_content div.details div.spring h3 {
-    font-size: 20px;
-  }
-}
-section.season div.tabs div.tab_content div.gallery {
-  padding: 20px;
-  padding-left: unset;
+section.season div.tabs div.tab_content div.details div.preview {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  grid-column: 2 span;
 }
 @media (max-width: 640px) {
-  section.season div.tabs div.tab_content div.gallery {
-    padding: 0 10px;
+  section.season div.tabs div.tab_content div.details div.preview {
+    display: none;
   }
+}
+section.season div.tabs div.tab_content div.details div.preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  border-radius: 16px;
+}
+section.season div.tabs div.tab_content div.gallery div.description {
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  grid-gap: 26px;
+  grid-row: 2 span;
+}
+@media (max-width: 640px) {
+  section.season div.tabs div.tab_content div.gallery div.description {
+    margin-bottom: 16px;
+  }
+}
+section.season div.tabs div.tab_content div.gallery div.description div.winter, section.season div.tabs div.tab_content div.gallery div.description div.spring {
+  display: grid;
+  grid-gap: 14px;
+}
+section.season div.tabs div.tab_content div.gallery div.description div.winter h3, section.season div.tabs div.tab_content div.gallery div.description div.spring h3 {
+  color: black;
+}
+@media (max-width: 960px) {
+  section.season div.tabs div.tab_content div.gallery div.description div.winter h3, section.season div.tabs div.tab_content div.gallery div.description div.spring h3 {
+    font-size: 20px;
+  }
+}
+section.season div.tabs div.tab_content div.gallery div.description div.winter ul li, section.season div.tabs div.tab_content div.gallery div.description div.spring ul li {
+  list-style-type: disc;
+  margin-left: 1.75em;
+  color: inherit !important;
+}
+section.season div.tabs div.tab_content div.gallery div.description div.winter ul li::marker, section.season div.tabs div.tab_content div.gallery div.description div.spring ul li::marker {
+  color: #212121;
 }
 section.season div.tabs div.tab_content div.gallery div.desktop {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
 @media (max-width: 640px) {
   section.season div.tabs div.tab_content div.gallery div.desktop {
-    display: none;
+    grid-template-columns: 1fr;
   }
 }
 section.season div.tabs div.tab_content div.gallery div.desktop img {
   width: 100%;
-  aspect-ratio: 282/186;
+  height: 186px;
   border-radius: 16px;
 }
-section.season div.tabs div.tab_content div.gallery div.desktop img:first-child {
-  grid-column: 2 span;
-  aspect-ratio: 574/390;
+@media (max-width: 640px) {
+  section.season div.tabs div.tab_content div.gallery div.desktop img {
+    display: none;
+  }
 }
 section.season div.tabs div.tab_content div.gallery div.mobile {
   display: none;
@@ -795,7 +819,7 @@ section.nutrition div.list div {
 @media (max-width: 960px) {
   section.nutrition div.list div {
     font-size: 16px;
-    padding: 30px 20px;
+    padding: 20px;
   }
 }
 section.nutrition div.list div:nth-child(4n-3), section.nutrition div.list div:nth-child(4n) {
