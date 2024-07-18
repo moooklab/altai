@@ -58,6 +58,7 @@ section.main div.text span {
 section.reviews {
   margin-top: 70px;
   margin-bottom: 70px;
+  padding: unset !important;
 }
 @media (max-width: 960px) {
   section.reviews {

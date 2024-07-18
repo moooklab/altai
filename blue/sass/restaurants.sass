@@ -1,0 +1,753 @@
+// Общее 
+@import common/_variables
+@import common/_mixins
+
+//Секции
+
+section.main
+    width: 100%
+    div.container
+        display: grid
+        align-items: end
+        height: 600px
+        +screen(m)
+            height: 310px
+
+    img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center center
+
+    div.text
+        position: relative
+        color: $color-06
+        padding-bottom: 82px
+        +screen(m)
+            padding-bottom: 50px
+
+        h1
+            font-weight: 400
+            font-size: 46px
+            line-height: 117%
+            text-transform: uppercase
+            text-align: right
+            color: $color-06
+            +screen(m)
+                font-weight: 400
+                font-size: 24px
+                line-height: 120%
+                text-transform: uppercase
+                text-align: center
+                color: $color-06
+
+section.individual
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 20px
+        margin-bottom: 50px
+    div.container
+        display: grid
+        grid-gap: 20px
+        font-size: 16px
+        +screen(m)
+            grid-gap: 8px
+
+section.dishes
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+
+    div.container
+        display: grid
+        grid-gap: 20px
+
+    div.slider
+        position: relative
+        display: grid
+        div.swiper
+            width: 100%
+            min-width: 0
+            +screen(m)
+                overflow: visible
+        div.swiper-slide
+            width: max-content
+        div.swiper-navigation
+            user-select: none
+            position: absolute
+            top: 80px
+            left: -48px
+            z-index: 1
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            justify-content: space-between
+            width: calc(100% + 96px)
+            transform: translateY(-50%)
+            pointer-events: none
+            +screen(m)
+                display: none
+            & > *
+                cursor: pointer
+                width: 32px
+                height: 32px
+                pointer-events: auto
+                &:first-child
+                    transform: rotate(180deg)
+                &:hover
+                    svg path
+                        stroke: $color-07
+                &.swiper-button-disabled
+                    opacity: 0
+                    pointer-events: none
+
+    div.dish
+        display: grid
+        grid-gap: 20px
+        width: 224px
+        img
+            width: 100%
+            height: 160px
+            border-radius: 10px
+        span 
+            display: block
+            font-size: 16px
+            line-height: 125%
+            text-align: center
+
+section.feeding
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 30px
+    
+    div.container
+        display: grid
+        grid-gap: 28px
+        text-align: center
+        +screen(m)
+            grid-gap: 20px
+            text-align: left
+
+    div.list
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        gap: 24px
+        +screen(m)
+            gap: 20px
+        
+        div.item
+            display: grid
+            justify-items: center
+            grid-gap: 16px
+            width: 100%
+            max-width: 230px
+            text-align: center !important
+            +screen(m)
+                max-width: 120px
+                font-size: 10px
+                grid-gap: 12px
+            
+            img
+                width: 85px
+                height: 85px
+                +screen(m)
+                    width: 56px
+                    height: 56px
+
+section.gallery
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 30px
+        margin-bottom: 50px
+    
+    div.desktop
+        display: grid
+        grid-template-columns: repeat(48, 1fr)
+        grid-gap: 17px 20px
+        +screen(m)
+            grid-template-columns: repeat(5, 1fr)
+        +screen(s)
+            display: none
+        
+        img
+            width: 100%
+            height: 210px
+            object-fit: cover
+            object-position: center center
+            border-radius: 16px
+            grid-column: 9 span
+            &:nth-child(8n + 2),
+            &:nth-child(8n + 4),
+            &:nth-child(8n + 5),
+            &:nth-child(8n + 7)
+                grid-column: 15 span
+            +screen(m)
+                grid-column: 2 span
+                &:nth-child(8n + 2),
+                &:nth-child(8n + 4),
+                &:nth-child(8n + 5),
+                &:nth-child(8n + 7)
+                    grid-column: 2 span
+                &:nth-child(4n + 2),
+                &:nth-child(4n + 3)
+                    grid-column: 3 span
+    
+    div.mobile
+        display: none
+        +screen(s)
+            display: grid
+ 
+        div.slider
+            position: relative
+            display: grid
+            div.swiper
+                width: 100%
+                min-width: 0
+                border-radius: 8px
+
+        div.swiper-pagination
+            position: static
+            display: grid
+            justify-content: center
+            align-items: center
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 14px
+            margin-top: 10px
+            span
+                display: grid
+                border-radius: 20px
+                width: 5px
+                height: 5px
+                background: $color-02
+                opacity: 1
+                margin: unset !important
+            span.swiper-pagination-bullet-active
+                width: 10px
+                height: 10px
+                background: $color-01
+
+        img
+            width: 100%
+            aspect-ratio: 1 / 1
+            object-fit: cover
+            object-position: center center
+
+section.schedule
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+    
+    div.container
+        display: grid
+        grid-gap: 26px
+        +screen(m)
+            grid-gap: 20px
+
+    div.list
+        display: grid
+        grid-template-columns: repeat(4, max-content)
+        grid-gap: 98px
+        +screen(m)
+            grid-gap: 20px 30px
+            grid-template-columns: repeat(3, max-content)
+            justify-content: space-between
+    
+    div.item
+        display: grid
+        align-content: start
+        grid-gap: 20px
+        +screen(m)
+            grid-gap: 6px
+        
+        strong
+            font-weight: 700
+            font-size: 20px
+            text-transform: uppercase
+            color: $color-01
+            +screen(m)
+                font-size: 16px
+        
+        span
+            display: block
+            font-size: 16px
+            +screen(m)
+                font-size: 14px
+
+        &:nth-child(4)
+            +screen(m)
+                grid-column: 1 / 4
+
+section.season
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+
+    div.container
+        display: grid
+        grid-gap: 30px
+
+    div.text
+        display: grid
+        grid-gap: 20px
+        font-size: 16px
+        color: black
+        +screen(m)
+            grid-gap: 10px
+            color: $color-04
+
+    div.tabs
+        display: grid
+        grid-template-columns: max-content 1fr
+        grid-gap: 14px
+        background: $color-06
+        padding: 16px
+        border-radius: 16px
+        +screen(m)
+            padding: 20px 10px
+            grid-template-columns: 1fr
+        +screen(s)
+            border-radius: unset
+            margin-left: -10px
+            width: calc(100% + 20px)
+            padding: 20px 10px
+            padding-bottom: 0
+
+        div.tabs_captions
+            display: grid
+            grid-gap: 5px
+            +screen(m)
+                grid-gap: 8px
+                grid-auto-flow: column
+                grid-auto-columns: max-content
+                margin-left: -10px
+                padding-left: 10px
+                padding-right: 10px
+                width: calc(100% + 20px)
+                overflow-x: scroll
+                &::-webkit-scrollbar
+                    display: none
+                    opacity: 0
+
+            div.tab_caption.opened
+                div.date
+                    background: $color-bg
+                    border: 1px solid #dcdcdc
+            div.date
+                cursor: pointer
+                display: grid
+                align-items: center
+                grid-template-columns: max-content 1fr
+                grid-gap: 15px
+                padding: 10px 20px
+                border: 1px solid transparent
+                border-radius: 16px
+                transition: all .2s
+                +screen(m)
+                    grid-gap: 8px
+                    padding: 14px 10px
+                    border: 1.50px solid #e2dce4
+                &:hover
+                    border: 1px solid #dcdcdc
+
+                img
+                    +screen(m)
+                        width: 32px
+                        height: 32px  
+                div.details
+                    display: grid
+                    align-items: center
+                    strong
+                        font-weight: 700
+                        font-size: 15px
+                        line-height: 133%
+                        color: #000
+                        +screen(m)
+                            font-size: 12px
+                            line-height: 150%
+                    span
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 143%
+                        color: #000
+                        +screen(m)
+                            font-size: 10px
+                            line-height: 150%
+
+        div.tab_content
+            display: grid
+            grid-template-columns: 320px 1fr
+            border: 1px solid #e2dce4
+            border-radius: 16px
+            background: $color-bg
+            height: 100%
+            display: none
+            +screen(s)
+                width: calc(100% + 20px)
+                margin-left: -10px
+                grid-template-columns: 1fr
+                border-radius: unset
+                border: unset
+            &.opened
+                display: grid
+
+            div.details
+                padding: 30px 27px
+                +screen(m)
+                    padding: 20px 10px
+                & > h3
+                    font-weight: 700
+                    color: black
+                    +screen(m)
+                        font-size: 20px
+                        font-weight: 500
+
+                div.dates
+                    display: grid
+                    align-items: center
+                    grid-template-columns: max-content 1fr
+                    grid-gap: 15px
+                    margin-top: 22px
+                    margin-bottom: 30px
+                    +screen(m)
+                        margin-top: 18px
+                        margin-bottom: 18px
+                    div
+                        display: grid
+                        line-height: 143%
+                        color: $color-01
+
+                ul
+                    li
+                        list-style-type: disc
+                        margin-left: 1.75em
+                        color: inherit !important
+                        &::marker
+                            color: $color-04
+
+                div.winter
+                    display: grid
+                    grid-gap: 14px
+                    margin-top: 92px
+                    +screen(m)
+                        margin-top: 20px
+                    h3
+                        color: black
+                        +screen(m)
+                            font-size: 20px
+                div.spring
+                    display: grid
+                    grid-gap: 14px
+                    margin-top: 26px
+                    +screen(m)
+                        margin-top: 20px
+                    h3
+                        color: black
+                        +screen(m)
+                            font-size: 20px
+
+            div.gallery
+                padding: 20px
+                padding-left: unset
+                +screen(s)
+                    padding: 0 10px
+
+                div.desktop
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-gap: 10px
+                    +screen(s)
+                        display: none
+                    img
+                        width: 100%
+                        aspect-ratio: 282 / 186
+                        border-radius: 16px
+                        &:first-child
+                            grid-column: 2 span
+                            aspect-ratio: 574 / 390
+                
+                div.mobile
+                    display: none
+                    +screen(s)
+                        display: grid
+
+                    div.swiper
+                        width: 100%
+                        min-width: 0
+                        overflow: visible
+
+                    img
+                        width: 100%
+                        aspect-ratio: 322 / 213
+                        object-fit: cover
+                        object-position: center center
+                        border-radius: 8px
+
+    div.cards
+        display: grid
+        +screen(s)
+            margin-top: -10px
+
+        div.swiper
+            width: 100%
+            min-width: 0px
+            overflow: visible
+
+        div.season_card
+            display: block
+            border-radius: 20px
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+            background: $color-06
+            overflow: clip
+            height: 100%
+            text-decoration: unset
+            +screen(m)
+                border-radius: 8px 8px 16px 16px
+            img
+                width: 100%
+                height: 210px
+                object-fit: cover
+                object-position: center center
+            div.text
+                display: grid
+                grid-gap: 10px
+                padding: 20px 25px
+                +screen(s)
+                    padding: 20px 16px
+                    grid-gap: 20px
+                span
+                    font-size: 14px
+                    line-height: 143%
+                    color: #727272
+            &:hover
+                color: inherit
+                h3
+                    color: $color-01
+
+section.nutrition
+    margin-top: 70px
+    margin-bottom: 70px
+
+    div.container
+        display: grid
+        grid-gap: 20px
+        
+    div.list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 12px 20px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+        div
+            display: grid
+            align-items: center
+            text-align: center
+            min-height: 172px
+            padding: 36px 78px 46px
+            background: #fdfdfd
+            border-radius: 16px
+            font-weight: 400
+            font-size: 14px
+            line-height: 129%
+            text-align: center
+            +screen(m)
+                font-size: 16px
+                padding: 30px 20px
+            &:nth-child(4n-3),
+            &:nth-child(4n)
+                background: $color-07
+                color: #fdfdfd
+            +screen(s)
+                &:nth-child(4n-3),
+                &:nth-child(4n)
+                    background: #fdfdfd
+                    color: inherit
+                &:nth-child(2n-1)
+                    background: $color-07
+                    color: #fdfdfd
+
+    div.list2
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 30px 20px
+        margin-top: 50px
+        +screen(s)
+            grid-template-columns: 1fr
+            margin-top: 20px
+
+        & > *:nth-child(2)
+            div.icon
+                background: $color-01
+                svg path
+                    fill: white
+
+        div.icon
+            display: grid
+            align-items: center
+            justify-items: center
+            height: 160px
+            width: 100%
+            background: $color-06
+            margin-bottom: 20px
+            border-radius: 10px
+
+        span
+            font-size: 16px
+
+@import sections/_reviews
+section.reviews
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+
+section.video
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+    div.player
+        position: relative
+        video
+            object-fit: cover
+            object-position: center center
+            aspect-ratio: 1184 / 500
+            width: 100%
+            border-radius: 16px
+            overflow: clip
+            +screen(m)
+                border-radius: 8px
+                aspect-ratio: 356 / 236
+            &::-webkit-media-controls
+                opacity: 0
+                transition: all .2s
+            &:hover
+                &::-webkit-media-controls
+                    opacity: 1
+        div.play
+            cursor: pointer
+            div.icon
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 100px
+                height: 100px
+                transform: translate(-50%, -50%)
+                z-index: 2
+                +screen(m)
+                    width: 75px
+                    height: 75px
+                img
+                    width: 100%
+                    height: 100%
+            div.overlay
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                z-index: 1
+            &.played
+                div.icon
+                    display: none
+
+@import sections/_reserve
+section.reserve
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+
+section.also
+    margin-top: 70px
+    margin-bottom: 70px
+    +screen(m)
+        margin-top: 50px
+        margin-bottom: 50px
+
+    div.container
+        display: grid
+        grid-gap: 20px
+
+        div.swiper
+            width: 100%
+            min-width: 0px
+            overflow: visible
+
+        a.also_card
+            display: block
+            border-radius: 16px
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2)
+            background: $color-06
+            overflow: clip
+            height: 100%
+            text-decoration: unset
+            +screen(m)
+                border-radius: 8px 8px 16px 16px
+
+            img
+                width: 100%
+                height: 210px
+                object-fit: cover
+                object-position: center center
+
+            div.text
+                display: grid
+                grid-gap: 16px
+                padding: 30px
+                padding-top: 20px
+                +screen(s)
+                    padding: 20px 16px 32px
+                    grid-gap: 20px
+                span
+                    font-size: 14px
+                    line-height: 143%
+                    color: #727272
+                    +screen(m)
+                        color: inherit
+
+            &:hover
+                color: inherit
+                h3
+                    color: $color-01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

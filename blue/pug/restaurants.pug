@@ -1,0 +1,334 @@
+extends common/_layout.pug
+include common/_mixins.pug
+
+mixin dish(image, title)
+    div.dish
+        img(src=image, alt=title)
+        span= title
+
+mixin date(icon, date, name)
+    div.date
+        img(src=icon, alt="")
+        div.details
+            strong= date
+            span= name
+
+
+block links
+    link(rel="stylesheet", href="css/restaurants.css")
+
+block content
+    
+    section.main
+        div.container
+            img(src="images/24.webp", alt="", style="object-position: 25% center")
+            div.text
+                h1 Ресторан
+
+    section.individual
+        div.container
+            h2 ИНДИВИДУАЛЬНЫЙ ПОДХОД К ЦЕНИТЕЛЯМ КОМФОРТА
+            p Ресторан санатория – это место для наслаждения первоклассной едой от шеф-повара и расслабленной атмосферой с внимательным обслуживанием. Наше меню обновляется каждый день, включает в себя изысканные блюда и закуски из уникальных продуктов, расширенный ассортимент которых включает в себя: палтус, масляную рыбу, яйцо перепела, перепела, утку, марала (сезон), кролика, икру красную, креветки и многое другое. Сервис ресторана ориентируется на удобство, подстраивается под особенности каждого гостя и запоминается своей дружелюбностью и открытостью
+
+    section.dishes
+        div.container
+            h2 МЕНЮ ВКЛЮЧАЕТ
+            div.slider
+                div.swiper
+                    div.swiper-wrapper
+                        div.swiper-slide: +dish('images/25.webp', 'Английский завтрак')
+                        div.swiper-slide: +dish('images/26.webp', 'Комплекс правильного питания')
+                        div.swiper-slide: +dish('images/27.webp', 'Сырники со сметаной и ягодой')
+                        div.swiper-slide: +dish('images/28.webp', 'Филе утки с вишневым соусом')
+                        div.swiper-slide: +dish('images/29.webp', 'Бифштекс с яичницей и картофельными дольками')
+                        div.swiper-slide: +dish('images/25.webp', 'Английский завтрак')
+                        div.swiper-slide: +dish('images/26.webp', 'Комплекс правильного питания')
+                        div.swiper-slide: +dish('images/27.webp', 'Сырники со сметаной и ягодой')
+                        div.swiper-slide: +dish('images/28.webp', 'Филе утки с вишневым соусом')
+                        div.swiper-slide: +dish('images/29.webp', 'Бифштекс с яичницей и картофельными дольками')
+                div.swiper-navigation
+                    div.arrow: include ../images/arrow3.svg
+                    div.arrow: include ../images/arrow3.svg
+
+    section.feeding
+        div.container
+            h2 Питание в ресторане  - это...
+
+            div.list
+                div.item
+                    img(src="images/cook.svg", alt="")
+                    span Подача горячих блюд официантами
+                div.item
+                    img(src="images/products.svg", alt="")
+                    span Расширенный ассортимент продуктов, используемых в приготовлении блюд
+                div.item
+                    img(src="images/table.svg", alt="")
+                    span отсутствие суеты #[br]и комфорт
+
+    section.gallery
+        div.container
+            div.desktop
+                img(src="images/32.webp", alt="")
+                img(src="images/34.webp", alt="")
+                img(src="images/33.webp", alt="")
+                img(src="images/35.webp", alt="")
+                img(src="images/31.webp", alt="")
+                img(src="images/37.webp", alt="")
+                img(src="images/38.webp", alt="")
+                img(src="images/36.webp", alt="")
+            div.mobile
+                div.slider
+                    div.swiper
+                        div.swiper-wrapper
+                            div.swiper-slide: img(src="images/32.webp", alt="")
+                            div.swiper-slide: img(src="images/34.webp", alt="")
+                            div.swiper-slide: img(src="images/33.webp", alt="")
+                            div.swiper-slide: img(src="images/35.webp", alt="")
+                            div.swiper-slide: img(src="images/31.webp", alt="")
+                            div.swiper-slide: img(src="images/37.webp", alt="")
+                            div.swiper-slide: img(src="images/38.webp", alt="")
+                            div.swiper-slide: img(src="images/36.webp", alt="")
+                    div.swiper-pagination
+
+    section.schedule
+        div.container
+            h2 Расписание
+            div.list
+                div.item
+                    strong Завтрак
+                    div.time
+                        span 07:15 - 10:00
+                div.item
+                    strong обед
+                    div.time
+                        span 12:15 - 15:00
+                div.item
+                    strong ужин
+                    div.time
+                        span 17:15 - 20:00
+                div.item
+                    strong Полдники для детей в кофейне
+                    div.time
+                        span 1-й полдник - 11:00
+                        span 2-й полдник - 16:00
+
+    section.season
+        div.container
+
+            div.text
+                h2 СЕЗОННОЕ ПИТАНИЕ
+                p Ежедневно мы предлагаем разнообразное меню в каждом формате питания. Но есть периоды, когда мы готовы удивить гостей дополнительными гастрономическими событиями. #[br]#[br]Предлагаем ознакомиться с 4 вариантами сезонных предложений по периодам, каждый из которых имеет свои преимущества с уникальными гастрономическими впечатлениями:
+
+            div.tabs
+                div.tabs_captions
+                    div.tab_caption.opened: +date('images/time_like.svg', '10.01 — 28.02', 'Классик')
+                    div.tab_caption: +date('images/time_light.svg', '01.03 — 24.03 ', 'Плюс')
+                    div.tab_caption: +date('images/time_star.svg', '25.03 — 31.03', 'Ультра')
+                    div.tab_caption: +date('images/time_light.svg', '01.04 — 26.04', 'Плюс')
+                    div.tab_caption: +date('images/time_check.svg', '27.04 — 11.05', 'Премиум')
+                    div.tab_caption: +date('images/time_light.svg', '12.05 — 19.05', 'Плюс')
+                    div.tab_caption: +date('images/time_star.svg', '20.05 — 10.09', 'Ультра')
+                    div.tab_caption: +date('images/time_light.svg', '11.09 — 30.10 ', 'Плюс')
+                    div.tab_caption: +date('images/time_star.svg', '30.10 — 05.11', 'Ультра')
+                    div.tab_caption: +date('images/time_like.svg', '06.11 — 27.12', 'Классик')
+                    div.tab_caption: +date('images/time_check.svg', '28.12 — 09.01', 'Премиум')
+                div.tabs_contents
+                    div.tab_content.opened
+                        div.details
+                            h3 Премиум
+                            div.dates
+                                img(src="images/calendar2.svg", alt="")
+                                div
+                                    span Весна: 27.04 — 11.05
+                                    span Зима: 28.12 — 09.01
+                            ul 
+                                li Классический ассортимент блюд, закусок, десертов и напитков с сезонным наполнением.#[br]#[br]
+                                li Праздничные фирменные блюда и авторские закуски, а также алкогольные и безалкогольными напитки.#[br]#[br]
+                                li Дополнительный ассортимент в детском меню.
+                            div.winter
+                                h3 новогодние каникулы
+                                ul
+                                    li Новогодние безлимитные угощения и напитки.
+                                    li Новогодний фуршет 31 декабря.
+                                    li Новогодний банкет 31 декабря.
+                            div.spring
+                                h3 майские каникулы
+                                ul
+                                    li Гриль-фестиваль на природе.
+                                    li Гриль ужины с дополнительными закусками барбекю и напитками.
+                                    li Гастро-ужины с дополнительными закусками и напитками.
+                        div.gallery
+                            div.desktop
+                                img(src="images/39.webp", alt="")
+                                img(src="images/40.webp", alt="")
+                                img(src="images/41.webp", alt="")
+                                img(src="images/42.webp", alt="")
+                                img(src="images/43.webp", alt="")
+                            div.mobile
+                                div.swiper
+                                    div.swiper-wrapper
+                                        div.swiper-slide: img(src="images/39.webp", alt="")
+                                        div.swiper-slide: img(src="images/40.webp", alt="")
+                                        div.swiper-slide: img(src="images/41.webp", alt="")
+                                        div.swiper-slide: img(src="images/42.webp", alt="")
+                                        div.swiper-slide: img(src="images/43.webp", alt="")
+                    -for(x=1; x<=10; x++)
+                        div.tab_content
+                            div.details
+                                h3 Премиум
+                                div.dates
+                                    img(src="images/calendar2.svg", alt="")
+                                    div
+                                        span Весна: 27.04 — 11.05
+                                        span Зима: 28.12 — 09.01
+                                ul 
+                                    li Классический ассортимент блюд, закусок, десертов и напитков с сезонным наполнением.#[br]#[br]
+                                    li Праздничные фирменные блюда и авторские закуски, а также алкогольные и безалкогольными напитки.#[br]#[br]
+                                    li Дополнительный ассортимент в детском меню.
+                                div.winter
+                                    h3 новогодние каникулы
+                                    ul
+                                        li Новогодние безлимитные угощения и напитки.
+                                        li Новогодний фуршет 31 декабря.
+                                        li Новогодний банкет 31 декабря.
+                                div.spring
+                                    h3 майские каникулы
+                                    ul
+                                        li Гриль-фестиваль на природе.
+                                        li Гриль ужины с дополнительными закусками барбекю и напитками.
+                                        li Гастро-ужины с дополнительными закусками и напитками.
+                            div.gallery
+                                div.desktop
+                                    img(src="images/39.webp", alt="")
+                                    img(src="images/40.webp", alt="")
+                                    img(src="images/41.webp", alt="")
+                                    img(src="images/42.webp", alt="")
+                                    img(src="images/43.webp", alt="")
+                                div.mobile
+                                    div.swiper
+                                        div.swiper-wrapper
+                                            div.swiper-slide: img(src="images/39.webp", alt="")
+                                            div.swiper-slide: img(src="images/40.webp", alt="")
+                                            div.swiper-slide: img(src="images/41.webp", alt="")
+                                            div.swiper-slide: img(src="images/42.webp", alt="")
+                                            div.swiper-slide: img(src="images/43.webp", alt="")
+
+            div.cards
+                div.swiper
+                    div.swiper-wrapper
+                        div.swiper-slide
+                            div.season_card
+                                img(src="images/44.webp", alt="")
+                                div.text
+                                    h3 гриль-фестивали
+                                    span Фуршет на открытом воздухе с приготовлением на живом огне
+                        div.swiper-slide
+                            div.season_card
+                                img(src="images/46.webp", alt="")
+                                div.text
+                                    h3 ШОУ-ужины
+                                    span Необычные блюда разных стран и традиций
+                        div.swiper-slide
+                            div.season_card
+                                img(src="images/45.webp", alt="")
+                                div.text
+                                    h3 безлимитные фуршеты
+                                    span Праздничный шведский стол
+
+    section.nutrition
+        div.container
+            h2 Питание в ресторане
+
+            div.list
+                div Данный тип питания доступен для отдыхающих в номерах повышенной комфортности. Для гостей стандартных номеров есть возможность перехода в  «Ресторан» за доплату. Соответствующие цены в разделе «Цены на услуги питания».
+                div При первом посещении ресторана за гостем закрепляется место за определенным столиком, которое на период отдыха будет предназначаться только для него и его семьи.
+                div Питание организовано по заказному меню с пожеланиями блюд и порции на следующий день.
+                div Основные блюда подаются официантами, время ожидания составляет не более 10 минут.
+                div Без ограничений на дополнительных зонах с элементами «шведского стола» предлагается: салат-бар с закусками, фруктовыми нарезками и соусами станции с горячими и холодными напитками десертная зона шоколадный фонтан на ужине.
+                div В ресторане есть меню с детскими блюдами, а также готовятся дополнительные детские закуски и угощения. В одном из двух залов ресторана открыт детский уголок со столиками и игрушками.
+
+            div.list2
+                div.certificate
+                    div.icon: img(src="images/price.svg", alt="")
+                    span Сертификат соответствия услуг питания № РОСС RU.04АЛТО.01.М00037 от 06.03.2024 ООО
+                div.gost
+                    div.icon
+                        include ../images/user.svg
+                    span «Алтайсертификат» о соответствии требованиям ГОСТ услуг ресторана без сопровождения развлекательных программ, ресторан 1 класса. Срок действия по 05.03.2027.
+
+    include sections/_reviews.pug
+
+    section.video
+        div.container
+            div.player
+                div.play
+                    div(onclick="this.parentNode.nextElementSibling.pause(); this.parentNode.classList.remove('played')").overlay
+                    div(onclick="this.parentNode.nextElementSibling.play(); this.parentNode.classList.add('played')").icon: img(src="images/play.svg", alt="")
+                video(poster="images/video2.webp", loop, playsinline )
+                    source(src="https://rodnik-altaya.com//upload/iblock/ed3/czqxrnm4mmlsg3itye0vzzy0cfbg1c59/Ekskursiya_v2_old_logo_1_.mp4", type="video/mp4")
+
+    include sections/_reserve.pug
+
+    section.also
+        div.container
+            h2 ВАС ТАКЖЕ МОЖЕТ ЗАИНТЕРЕСОВАТЬ
+            div.swiper
+                div.swiper-wrapper
+                    div.swiper-slide
+                        a(href="###").also_card
+                            img(src="images/44.webp", alt="")
+                            div.text
+                                h3 Ресторан
+                                span Повара ресторана приготовят питательный завтрак, сытный обед и здоровый ужин, учитывая рекомендации врача и ваши личные предпочтения.
+
+                    div.swiper-slide
+                        a(href="###").also_card
+                            img(src="images/46.webp", alt="")
+                            div.text
+                                h3 Зал "Шведский стол"
+                                span Новые блюда в меню каждый день, семь оздоровительных диет и детское меню для малышей.
+
+    script.
+        class Tabs {
+
+            constructor(section, captions, contents) {
+                this.section = section
+                this.captions = captions
+                this.contents = contents
+
+                this.captions.forEach( (caption, index) => {
+                    caption.addEventListener('click', event => {
+                        this.resetAll()
+                        this.onClick(index)
+                    })
+                })
+            }
+
+            onClick(index) {
+                this.captions[index].classList.add('opened')
+                this.contents[index].classList.add('opened')
+            }
+
+            resetAll(){
+                this.captions.forEach( caption => caption.classList.remove('opened'))
+                this.contents.forEach( content => content.classList.remove('opened'))
+            }
+
+        }
+
+        tabsSections = document.querySelectorAll('div.tabs')
+        tabsSections.forEach( tabSection => {
+            captions = tabSection.querySelectorAll('.tab_caption')
+            contents = tabSection.querySelectorAll('.tab_content')
+            tab = new Tabs(tabSection, captions, contents)
+        })
+
+
+
+
+
+
+
+
+
+

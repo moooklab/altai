@@ -148,4 +148,58 @@ setTimeout(function(){
             },
         }
     })
+
+    new Swiper('section.dishes div.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        freeMode: {
+            enabled: true,
+            sticky: true,
+        },
+        navigation: {
+            prevEl: document.querySelector('section.dishes div.swiper-navigation > *:first-child'),
+            nextEl: document.querySelector('section.dishes div.swiper-navigation > *:last-child')
+        }
+    })
+
+    new Swiper('section.gallery div.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 5,
+        pagination: {
+            el: document.querySelector('section.gallery div.swiper-pagination')
+        }
+    })
+
+    new Swiper('section.season div.tabs div.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 10
+    })
+    new Swiper('section.season div.cards div.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        breakpoints: {
+            640: {
+                slidesPerView: 2.2,
+                spaceBetween: 10,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        }
+    })
+    new Swiper('section.also div.swiper', {
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+        breakpoints: {
+            640: {
+                slidesPerView: 2.2,
+                spaceBetween: 10,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        }
+    })
 }, 100)
